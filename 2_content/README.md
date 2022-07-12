@@ -1,4 +1,4 @@
-## Highest Specificity
+# Highest Specificity
 !Important
     ↓
 InlineStyle
@@ -10,7 +10,7 @@ Classes
 Elements
 
 
-## Inheritance
+# Inheritance
 ```
 Body color: #FFFFFF;
     ↓
@@ -21,9 +21,9 @@ DIV (Inherits the color)
 Nav (Inherits color from body)                               ↓ 
 ```
 
-## Cascade
+# Cascade
 
-### Each code snipped written below overtakes the one above
+## Each code snipped written below overtakes the one above
 
 ```css
 .box {
@@ -56,11 +56,3 @@ ID myParagraph will be red
 ```css
 #myParagraph {color: red;} 
 ```
-
-## Relative Units
-Percentage
-### %
-em
-### em
-view width and view height
-### vw and vh
