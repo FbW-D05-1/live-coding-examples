@@ -11,6 +11,7 @@ Elements
 
 
 ## Inheritance
+```
 Body color: #FFFFFF;
     ↓
 DIV (Inherits the color)
@@ -18,6 +19,7 @@ DIV (Inherits the color)
     ↓                       ↓
     ↓                       → EM (inherited color from h1)
 Nav (Inherits color from body)                               ↓ 
+```
 
 ## Cascade
 
