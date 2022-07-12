@@ -1,0 +1,69 @@
+/* COLORS IN CSS */
+
+/* rgb */
+/* red, green, blue */
+/* #derya {
+    color: #eda322;
+} */
+
+/* rgba */
+/* red green blue alpha */
+/* .rgba {
+    color: rgb(26, 13, 140);
+} */
+
+/* hex */
+/* hexdecimal */
+
+/* .hex {
+    color: #a90707
+} */
+
+/* hsl(hue, saturation, lightness) */
+
+/* hsla */
+
+/* PSEUDO CLASSES */
+
+#derya:hover {
+
+    background-color: #7b1d1d;
+
+}
+
+.rgba:hover {
+
+    color: green;
+
+}
+
+
+
+
+/* multiple selectors */
+h3, h2:hover {
+    color:aqua;
+}
+
+/* the links  */
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+  color: red;
+}
+
+a:active {
+    background-color: darkblue;
+}
+
+.eti:active {
+    background-color: tomato;
+    color: green;
+}
+
+/* CSS UNITS */
+
+/* VW */

@@ -1,0 +1,57 @@
+/**/
+/* html{
+    font-size: 16px;
+} */
+/* Classes */
+
+.blue {
+    color: blue;
+}
+.green{
+    color: green;
+}
+
+.orange{
+    color: orange;
+}
+.paragraph-bio-background-black {
+    background-color: black;
+}
+.paragraph-bio-background-black {
+    background-color: red;
+}
+
+.red-paragraph{
+    color: red;
+}
+
+.green_paragraph {
+    color:green;
+}
+
+.bold {
+    font-weight: bold;
+}
+.massiveParagraph {
+    font-size: 5em;
+}
+/* ID */
+
+#firstParagraphId{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#easyWay {
+    color: red ;
+    font-size: 50px;
+}
+
+.red{
+    color: orange !important;
+}
+
+/* 
+p{
+    color: violet !important;
+    font-size: 100px !important;
+} */
