@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em vs rem</title>
+    <style>
+        /* html{
+            font-size: 30px;
+            font
+            
+        } */
+        body{
+            font-size: 16px;
+        }
+        .one-em{
+            font-size: 1em;
+        }
+        .one-rem {
+            font-size: 1rem;
+        }
+        .two-em{
+            font-size: 2em;
+        }
+        .two-rem {
+            font-size: 2rem;
+        }
+        .two-hundred-percent{
+            font-size: 200%;
+        }
+        .parent {
+            border: 3px solid black;
+            width:200px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--rem is based on root-->
+    <!--em is not relative to the root-->
+    <div class="one-rem">1rem</div>
+    <div class="one-em">1em</div>
+    <div class="two-rem">2rem</div>
+    <div class="two-em">2em</div>
+    <div class="two-hundred-percent">200%</div>
+    <hr>
+    <div class="parent">
+        <!--Em is bigger in this example cause parent has 30px which converts em to 100% of it's parents size-->
+        <!-- rem doesn't change cause root (html) is default to 16px but you can always change that -->
+        <div class="one-rem">1rem</div>
+        <div class="one-em">1em</div>
+        <div class="two-rem">2rem</div>
+        <div class="two-em">2em</div>
+        <div class="two-hundred-percent">200%</div>
+    </div>
+</body>
+</html>
