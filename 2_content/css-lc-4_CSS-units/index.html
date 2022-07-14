@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-1.0" />
+        <title>% VS px</title>
+        <style>
+            .box {
+                border: 1px solid black;
+                height:50px;
+                margin: 10px;
+                text-align: center;
+                background-color: red;
+                font-size: 2em;
+            }
+            .fifty-percent {
+                width: 50%;
+            }
+            .one-hundred-pixel{
+                width: 100px;
+            }
+            .parent{
+                border: 3px solid black;
+                width: 134px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="box fifty-percent">
+            50%
+        </div>
+        <div class="box one-hundred-pixel">
+            100px
+        </div>
+        <hr>
+        <div class="parent">
+            <div class="box fifty-percent">
+                50%
+            </div> <div class="box one-hundred-pixel">
+                100px
+            </div>
+        </div>
+        
+    </body>
+</html>

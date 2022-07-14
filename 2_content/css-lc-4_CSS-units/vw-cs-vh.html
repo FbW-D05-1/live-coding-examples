@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Width Vs View Height</title>
+
+    <style>
+        /* *{
+            margin: 0;
+        } */
+        .box {
+                border: 1px solid black;
+                height:50px;
+                margin: 10px;
+                text-align: center;
+                background-color: red;
+                font-size: 2em;
+            }
+        .fifty-percent {
+            width: 50%;
+        }
+        .fifty-vw{
+            width: 50vw;
+        }
+        .fifty-vh{
+            height: 50vh;
+            width: 20vw;
+        }
+
+        .parent{
+            border: 3px solid black;
+            width: 135px;
+            height: 134px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box fifty-percent">50%</div>
+    <div class="box fifty-vw">50vw</div>
+    <div class="box fifty-vh">50vh</div>
+    <hr>
+    <div class="parent">
+        <div class="box fifty-percent">50%</div>
+        <div class="box fifty-vw">50vw</div>
+        <div class="box fifty-vh">50vh</div>
+    </div>
+
+    
+</body>
+</html>
