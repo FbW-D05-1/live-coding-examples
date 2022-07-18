@@ -1,0 +1,23 @@
+body {
+  background-image: url(./images/neon-garage.jpg);
+  object-fit: cover;
+  background-position: center;
+}
+
+#theRockGif {
+  border: 5px solid #377495;
+  border-radius: 50%;
+  float: left;
+}
+.box {
+  border: 5px solid red;
+  margin: 10px;
+}
+
+#deryaSpan {
+  border-color: aqua;
+}
+
+p {
+  color: white;
+}
