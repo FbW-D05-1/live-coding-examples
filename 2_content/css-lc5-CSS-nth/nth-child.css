@@ -1,0 +1,39 @@
+/* Selects the second element of div siblings */
+/* div:nth-child(2) {
+    background: red;
+  }
+  
+  /* Selects the second li element in a list */
+  /* li:nth-child(2) {
+    background: lightgreen;
+  }
+   */
+  /* Selects every third element among any group of siblings */
+  /* :nth-child(3) {
+    background: yellow;
+  } */ 
+
+
+
+/* selects odds and even*/
+
+/* p:nth-child(odd) {
+    background: red;
+  }
+  
+  p:nth-child(even) {
+    background: lightgreen;
+  } */
+/* selects every third   */
+
+  /* p:nth-child(3n+0) {
+    background: red;
+  } */
+
+
+/* 
+Here, we specify a background color for all p elements whose index is a multiple of 3. Then we subtract 1 (will select the second, fifth, eight, etc): */
+
+p:nth-child(3n-1) {
+    background: red;
+  }

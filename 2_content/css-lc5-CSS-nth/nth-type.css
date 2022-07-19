@@ -1,0 +1,25 @@
+/* Selects the second element of div siblings */
+ div:nth-of-type(2) {
+    background: red;
+  } 
+  
+  /* Selects the second li element in a list */
+  li:nth-of-type(2) {
+    background: lightgreen;
+  }
+  
+  /* Selects every third element among any group of siblings */
+   :nth-of-type(3) {
+    background: yellow;
+  } 
+
+  /* Odd and even */
+
+  /* p:nth-of-type(odd) {
+    background: red;
+  }
+  
+  p:nth-of-type(even) {
+    background: blue;
+  } */
+
