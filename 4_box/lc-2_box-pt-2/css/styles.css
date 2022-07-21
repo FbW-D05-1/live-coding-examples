@@ -1,0 +1,58 @@
+div {
+    border: 1px solid royalblue;
+}
+
+.inline {
+    display: inline;
+    width: 20%;
+    height: 4rem;
+
+}
+
+.inline-block {
+    display: inline-block;
+    width: 20%;
+    height: 4rem;
+
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    background-color: blueviolet;
+    color: aqua;
+    /* first value takes top and bottom */
+    /* second value takes right and left */
+    padding: 3rem 5rem;
+    border-radius: 10px;
+    margin-right: 4rem;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* .btn {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+
+*/
