@@ -1,3 +1,10 @@
+```mermaid
+flowchart TD
+    A[I didn't understand the question] --> B{Did I google it?};
+    B -- Yes --> C[Google again];
+    B -- No --> D[Bruh];
+```
+
 ## HTML
 
 #### Q1. What is the purpose of the `<track>` tag, and when should it be used?
