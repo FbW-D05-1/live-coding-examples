@@ -1,3 +1,10 @@
+```mermaid
+flowchart TD
+    A[I didn't understand the question] --> B{Did I google it?};
+    B -- Yes --> C[Google again];
+    B -- No --> D[Bruh];
+```
+
 ## CSS
 
 #### Q1. In the following example, which selector has the highest specificity ranking for selecting the anchor link element?
