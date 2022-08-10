@@ -1,0 +1,81 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+
+/* Setting the font size */
+:root {
+    /* 16px => 10px */
+    font-size: 62.5%;
+}
+
+body {
+    /* brings back to 16px */
+    font-size: 1.6rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Fonts */
+.impact {
+    font-size: 1.6rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.fantastic {
+    font-family: fantasy;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Google Fonts */
+p.noto {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+/* Direction & Alignment */
+
+.rtl {
+    direction: ltr;
+}
+
+#align {
+    /* start = left, end = right  */
+    text-align: justify;
+    /*text-align: center;*/
+    width: 75%;
+    margin: 0 auto;
+}
+
+.Random {
+    text-align: right;
+}
+
+.transform {
+    /* text-transform: capitalize; */
+    text-transform: uppercase;
+}
+
+
+
+
+/* Styling with Pseudo */
+
+li:first-child {
+    text-decoration: underline
+        /*dotted black*/
+    ;
+}
+
+li:last-child {
+    text-decoration: line-through dotted black;
+}
+
+/* text-shadow: offset-x | offset-y | blur radius | color */
+
+.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+}

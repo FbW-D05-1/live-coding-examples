@@ -44,8 +44,8 @@ code {
     height: 150px;
     border: 2px solid magenta;
     overflow: scroll;
-    /* position: sticky;
-    top: 0; */
+    position: sticky;
+    top: 0;
 }
 
 .sticky {
@@ -88,8 +88,8 @@ code {
 
 .bottom {
     background-color: orangered;
-    position: relative;
+    /* position: relative;
     bottom: 150px;
     left: 20px;
-    z-index: 1;
+    z-index: 1; */
 }
