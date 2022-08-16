@@ -1,0 +1,83 @@
+/* Imports  */
+/* MIXINS*/
+/* Variables */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* general styling  */
+h1,
+h2 {
+  background-color: rgb(246, 120, 106);
+  color: rgb(245, 240, 234);
+  padding: 8px;
+}
+
+.shadow {
+  width: 300px;
+  height: 275px;
+  margin: 0 auto;
+  border: 1px solid rgb(48, 48, 48);
+}
+
+/* Basic Introduction */
+.one {
+  background-color: aqua;
+  /*Horizontal Offset | Vertical Offset | blur radius | optional spread*/
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ******************************** */
+/* Well Component */
+.two {
+  background-color: rgb(163, 161, 161);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Multiple Shadows */
+.three {
+  background-color: goldenrod;
+  box-shadow: 0 20px 20px rgb(7, 15, 255), 0 10px 10px rgb(224, 20, 20), -20px 0px 20px rgb(255, 9, 247), 0 30px 30px rgb(0, 255, 30);
+}
+
+/* USE CASES */
+/* BUTTON */
+button {
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 70px;
+  border-radius: 8px;
+  background-color: rgb(19, 129, 231);
+  color: rgb(236, 236, 236);
+  font-size: 20px;
+  box-shadow: inset 0 5px rgb(176, 200, 221), 0 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* *********************************** */
+/* Well component */
+.well-outer {
+  border: solid;
+  width: 60%;
+  margin: 40px auto;
+  background-color: rgb(95, 93, 93);
+  border: 1px solid;
+  box-shadow: inset 0px 2px 2px rgba(37, 37, 37, 0.4);
+}
+
+.well-content {
+  margin-top: 40px;
+  padding: 15px;
+  text-align: center;
+}
+
+.fa-cloud-upload-alt {
+  color: rgb(201, 199, 199);
+}
+
+span {
+  cursor: pointer;
+  color: rgba(36, 137, 253, 0.972);
+}/*# sourceMappingURL=style.css.map */

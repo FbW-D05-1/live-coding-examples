@@ -7,10 +7,94 @@ body {
 
 /* PRIMARY COLORS */
 
+.color {
+    padding: 50px;
+    text-align: center;
+    color: whitesmoke;
+}
 
+.primary {
+    background-color: rgb(44, 155, 211);
+}
+
+.secondary {
+    background-color: rgb(211, 100, 44);
+}
 
 /* GRAYS */
 
+.gray {
+    text-align: center;
+    padding: 30px;
+}
 
+.darkest {
+    background-color: rgb(38, 39, 39);
+}
+
+.dark {
+    background-color: rgb(59, 59, 59);
+}
+
+.medium {
+    background-color: rgb(106, 106, 106);
+}
+
+.light {
+    background-color: rgb(156, 156, 156);
+}
+
+.lightest {
+    background-color: rgb(209, 209, 209);
+}
+
+h1 {
+    color: rgb(44, 155, 211);
+}
+
+h2 {
+    color: rgba(44, 155, 211, 0.76);
+}
+
+h3 {
+    color: rgba(44, 155, 211, 0.623);
+}
+
+a {
+    color: rgb(211, 100, 44);
+}
 
 /* Card */
+
+.card-main {
+    margin: 0 auto;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(31, 116, 158, 0.842)
+}
+
+.card-main-content {
+    padding: 12px;
+}
+
+.card-main-content h4 {
+    color: rgb(69, 180, 139)
+}
+
+.card-main-content p {
+    color: rgb(139, 139, 218);
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: rgb(230, 230, 234);
+    padding: 15px 28px;
+    border-radius: 18px;
+    text-decoration: none;
+    display: block;
+    width: 40%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.329);
+}

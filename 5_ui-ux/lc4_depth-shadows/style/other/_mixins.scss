@@ -1,0 +1,9 @@
+@mixin reset-default {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin display-block-center {
+    display: block;
+    margin: 0 auto;
+}
