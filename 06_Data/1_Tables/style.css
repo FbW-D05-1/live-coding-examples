@@ -1,11 +1,68 @@
-/* Rapper Table */
+/* Musician Table */
+.rappers {
+    margin: 5% auto;
+    width: 20%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.rappers tr:nth-child(even) {
+    background-color: yellow;
+}
+
+.rappers tr:nth-child(5) {
+    background-color: deeppink;
+    color: #efefef;
+}
+
+.rappers,
+td {
+    border-top: 1px solid gray;
+}
+
+.rappers td {
+    padding: 5px 8px;
+}
 
 /* ************************* */
 /* Expenses Table */
 
+.expenses {
+    width: 33%;
+    margin: 3% auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.expenses td {
+    border: 2px solid crimson;
+}
+
+.expenses thead {
+    background-color: pink;
+    font-family: Impact, sans-serif, "Arial Narrow Bold";
+}
+
+.expenses tfoot {
+    background-color: greenyellow;
+}
+
 
 /* ******************************* */
 /* Countries Table */
+.countries {
+    margin: 5% auto;
+    width: 80%;
+    text-align: center;
+    border: 2px solid red;
+
+}
+
+.countries,
+th,
+td {
+    border: 1px solid gray;
+}
 
 
 
