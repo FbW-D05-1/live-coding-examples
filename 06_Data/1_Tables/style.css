@@ -55,7 +55,6 @@ td {
     width: 80%;
     text-align: center;
     border: 2px solid red;
-
 }
 
 .countries,
@@ -67,7 +66,7 @@ td {
 
 
 /* ******************************* */
-/* Production Table */
-
-
 /* attribute selector - used to select elements with the specified attribute and value*/
+th[scope="col"] {
+    background-color: lightblue;
+}
