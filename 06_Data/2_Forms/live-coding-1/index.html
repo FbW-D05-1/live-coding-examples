@@ -10,34 +10,99 @@
 
 <body>
     <header>Contact Form</header>
-
     <!-- action - where the data is sent, e.g. a URL -->
+    <!-- GET | POST | PUT | UPDATE | DELETE -->
+    <form action="https://formspree.io/xoqkgnqo" method="POST">
 
-    <!-- fieldset is used to group several controls as well as labels within a web form -->
+        <!-- fieldset is used to group several controls as well as labels within a web form -->
+        <fieldset>
 
-
-    <!-- legend represents a caption for the content of its parent fieldset -->
-
-
-    <!-- the label element is visually AND programmatically associated with its corresponding text input using the 'for' attribute -->
-
-    <!-- name repesents the name of the associated data point submitted to the server -->
-
-    <!-- ******************************************* -->
-
-    <!-- Radio Buttons! = one or the other (or the other..) -->
-
-    <!-- ******************************************* -->
-
-    <!-- Checkbox! - allows multiple choices -->
+            <!-- legend represents a caption for the content of its parent fieldset -->
+            <legend>Your Details:</legend>
 
 
-    <!-- ************************************* -->
+            <!-- the label element is visually AND programmatically associated with its corresponding text input using the 'for' attribute -->
+            <div>
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" maxlength="30" />
+            </div>
+            <div>
+                <label for="surname">Surename:</label>
+                <input type="text" name="surname" id="surname" maxlength="50">
+            </div>
+            <!-- name repesents the name of the associated data point submitted to the server -->
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+            </div>
+        </fieldset>
+        <!-- ******************************************* -->
+
+        <fieldset>
+
+            <legend>Your Programming Experience</legend>
+            <p>Select your favourite language</p>
+
+            <!-- Radio Buttons! = one or the other (or the other..) -->
+            <div>
+                <input type="radio" id="java" name="language" value="java" checked>
+                <label for="java">Java</label>
+            </div>
+            <div>
+                <input type="radio" id="python" name="language" value="python">
+                <label for="python">Python</label>
+            </div>
+            <div>
+                <input type="radio" id="c++" name="language" value="c++">
+                <label for="c++">C++</label>
+            </div>
+
+            <!-- ******************************************* -->
+            <p>What careers are you considering?</p>
+
+            <!-- Checkbox! - allows multiple choices -->
+            <div>
+                <input type="checkbox" name="career" value="web-developer" id="career-web-dev" checked />
+                <label for="web-developer">Web Developer</label>
+            </div>
+            <div>
+                <input type="checkbox" name="career" value="mananger" id="career-mananger" />
+                <label for="mananger">Manangment</label>
+            </div>
+            <div>
+                <input type="checkbox" name="career" value="web-designer" id="carrer-web-designer" />
+                <label for="web-designer">Web Designer</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="career" value="sys-admin" id="career-sys-admin">
+                <label for="sys-admin">Sys Admin</label>
+            </div>
+            <div class="experience">
+                <label for="experience">Tell us about your experience:</label>
+                <textarea name="experience" id="experience" cols="30" rows="5" maxlength="300"></textarea>
+            </div>
 
 
+        </fieldset>
+        <!-- ************************************* -->
+        <div class="select">
+            <!-- the option element represents menu items in popups and other lists of items in an HTML document -->
+            <label for="reference">How did you find us?</label>
+            <select name="refrence" id="reference">
+                <option value="internet">Internet</option>
+                <option value="twitter">Twitter</option>
+                <option value="instagram">Instagram</option>
+                <option value="linked-in">LinkedIn</option>
+            </select>
 
-    <!-- the option element represents menu items in popups and other lists of items in an HTML document -->
+        </div>
+        <div class="submit">
+            <button class="btn-submit">Apply now</button>
+        </div>
 
+
+    </form>
 </body>
 
 </html>
