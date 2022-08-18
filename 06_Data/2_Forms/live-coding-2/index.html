@@ -10,24 +10,112 @@
 
 <body>
 
+    <form action="#" method="post">
+        <ul>
+            <li>
+                <label for="name">* Name:</label>
+                <!-- Required means the text field must be completed -->
+                <input type="text" name="name" id="name" maxlength="20" required>
+            </li>
+            <li>
+                <label for="email">E-mail:</label>
+                <!-- The disabled attribute makes the user unable to enter information in that particular input -->
+                <input type="email" name="email" placeholder="Enter email" id="email" disabled>
 
-    <!-- The disabled attribute makes the user unable to enter information in that particular input -->
-
-
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea name="msg" id="msg"></textarea>
+            </li>
+            <li>
+                <button type="submit">Send Your message</button>
+            </li>
+        </ul>
+    </form>
     <!-- ************************* OPT GROUP ************************* -->
     <!-- creates a grouping of options within a select element -->
 
-
+    <form action="#">
+        <label for="city-select">Choose Your City</label>
+        <select name="cities" id="city-select">
+            <option value="">Please select a city</option>
+            <optgroup label="Europe">
+                <option value="paris">Paris</option>
+                <option value="dublin">Dublin</option>
+                <option value="madrid">Madrid</option>
+                <option value="berlin">Berlin</option>
+            </optgroup>
+            <optgroup label="Central America">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+            <optgroup label="Bla bla">
+                <option value="san-salvador">San Salvador</option>
+                <option value="guatemala">Guatemala</option>
+                <option value="san-pedro">San Pedro</option>
+                <option value="quetzaltenango">Quetzaltenango</option>
+            </optgroup>
+        </select>
+    </form>
 
     <!-- ******************* FILE ********************* -->
     <!-- an input with type="file" lets the user choose one or more files from their device storage and once chosen, the files can be uploaded to a server
     using form submission -->
 
+    <form action="#" method="post">
+        <p>Upload a file:</p>
+        <input type="file" name="user-file">
+        <button type="submit">Upload</button>
+    </form>
+
 
     <!-- ********************** DATALIST ************************ -->
     <!-- contains a set of option elements that represent the permissible or recommended options available to choose from within other controls -->
-
-
+    <form action="#">
+        <label for="pet-choice">Pick Your Favourite Pet</label>
+        <input list="pet-choices" id="pet-choice" name="pet-choice" />
+        <datalist id="pet-choices">
+            <option value="dig-dig">Dig Dig</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="fish">Fish</option>
+            <option value="hamster">Hamster</option>
+            <option value="bird">Birb</option>
+            <option value="rat">Rat</option>
+        </datalist>
+    </form>
 </body>
 
 </html>
