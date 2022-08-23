@@ -1,0 +1,24 @@
+@import 'mixins.scss';
+
+
+
+@include breakpoint(large) {
+   div {
+      font-size: 2rem;
+      line-height: 1.4;
+   }
+}
+
+@include breakpoint(desktop) {
+   div {
+      font-size: 1rem;
+      line-height: 1.2;
+   }
+}
+
+@include breakpoint(tablet) {
+   div {
+      font-size: 0.5rem;
+      line-height: 1;
+   }
+}
