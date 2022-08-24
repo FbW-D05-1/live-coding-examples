@@ -1,0 +1,76 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+
+/* *********************************************** */
+.flex-container {
+    /* height: 100vh; */
+    border: 2px solid black;
+    display: flex;
+    /* default direction is row  - MAIN-AXIS*/
+    /* flex-direction: column; */
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.flexitem {
+    height: 15rem;
+    width: 15rem;
+    border: 1px solid black;
+    background-color: hotpink;
+    /* centering content inside box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* order */
+.first {
+    order: 2;
+}
+
+.second {}
+
+.third {
+    order: 1;
+}
+
+.fourth {
+    order: 3;
+}
+
+.fifth {
+    order: 4;
+}
+
+/* ********************************** */
+
+/* flexwrap - sets whether flex items are forced onto one line or can wrap onto multiple lines */
+
+.flex-container-wrap {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    gap: 12px;
+    flex-flow: row wrap;
+
+}
+
+.flex-container-wrap .flexitem-wrap {
+    height: 20rem;
+    width: 20rem;
+    border: 1px solid black;
+    background-color: chartreuse;
+}

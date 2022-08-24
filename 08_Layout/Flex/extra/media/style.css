@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#main>article {
+    flex: 1;
+}
+
+#main>nav,
+#main>aside {
+    background: beige;
+}
+
+#main>nav {
+    order: -1;
+}
+
+header,
+footer {
+    background: tomato;
+    height: 20vh;
+}
+
+header,
+footer,
+article,
+nav,
+aside {
+    padding: 1em;
+}
+
+/* MEDIA QUERY - MOBILE FIRST */

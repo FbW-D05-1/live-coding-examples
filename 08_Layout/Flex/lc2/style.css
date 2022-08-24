@@ -1,0 +1,58 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+}
+
+/* ***************************************** */
+
+.flex-container {
+    display: flex;
+}
+
+.item {
+    height: 20rem;
+    width: 20rem;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/* flex-grow */
+/* This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. */
+
+
+
+/* flex-shrink */
+/* This defines the ability for a flex item to shrink if necessary. */
+
+
+
+/* flex & flex-basis */
+/* flex: flex-grow flex-shrink flex-basis */
+
+/* flex-basis specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the flex shorthand, its specified value is the length zero.
+  
+  A flex-basis value set to auto sizes the element according to its size property (which can itself be the keyword auto, which sizes the element based on its contents). */
+
+
+/* ORDER */
+
+/* By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. */
+
+
+/* ***********************************/
+/* ALIGN SELF */
+/* this property specifies the alignment for the selected item inside the flex container */
+/* ********************************** */
