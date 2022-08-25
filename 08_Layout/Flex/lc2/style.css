@@ -31,13 +31,34 @@ body {
 
 /* flex-grow */
 /* This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. */
+/* .one {
+    flex-grow: 3;
+    height: 30rem;
+    width: 30rem;
+}
+
+.two {
+    flex-grow: 2;
+} */
+
+/* .three {
+    flex-grow: 3;
+} */
+
+.one {
+    flex-grow: 4;
+
+}
+
 
 
 
 /* flex-shrink */
 /* This defines the ability for a flex item to shrink if necessary. */
 
-
+.three {
+    flex-shrink: 3;
+}
 
 /* flex & flex-basis */
 /* flex: flex-grow flex-shrink flex-basis */
@@ -45,14 +66,102 @@ body {
 /* flex-basis specifies the initial size of the flex item, before any available space is distributed according to the flex factors. When omitted from the flex shorthand, its specified value is the length zero.
   
   A flex-basis value set to auto sizes the element according to its size property (which can itself be the keyword auto, which sizes the element based on its contents). */
-
+/* Three values: flex-grow | flex-shrink | flex-basis */
+.two {
+    flex: 2 2 10rem;
+    /* flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 10rem; */
+}
 
 /* ORDER */
 
 /* By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. */
+/* .one {
+    order: 2;
+}
 
+.two {
+    order: 1;
+}
+
+.four {
+    order: -1;
+} */
 
 /* ***********************************/
 /* ALIGN SELF */
 /* this property specifies the alignment for the selected item inside the flex container */
 /* ********************************** */
+
+.flex-container-2 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 20rem;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+
+.flex-start {
+    align-self: flex-start;
+    /* justify-self: center; */
+}
+
+.flex-end {
+    align-self: flex-end;
+}
+
+.center {
+    align-self: center;
+}
+
+.baseline {
+    align-self: baseline;
+}
+
+.stretch {
+    align-self: stretch;
+}
+
+.flex-item {
+    background: chartreuse;
+    padding: 5px;
+    width: 10rem;
+    margin: 5px;
+    line-height: 10rem;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Baseline */
+/* ********************************** */
+
+.parent {
+    height: 100vh;
+    display: flex;
+    align-items: baseline;
+}
+
+.child1 {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 136, 255, 0.775);
+}
+
+.child2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(64, 255, 0, 0.775);
+}
+
+.child3 {
+    font-size: 3px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 64, 0, 0.775);
+}
