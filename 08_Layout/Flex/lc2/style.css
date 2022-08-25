@@ -154,12 +154,14 @@ body {
 }
 
 .child2 {
+    padding: 50px;
     width: 200px;
     height: 200px;
     background: rgba(64, 255, 0, 0.775);
 }
 
 .child3 {
+    padding: 50px;
     font-size: 3px;
     width: 200px;
     height: 200px;
