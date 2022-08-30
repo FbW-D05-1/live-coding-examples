@@ -1,0 +1,71 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+}
+
+/* ************************************** */
+
+h1 {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+/* GRID WRAPPER */
+.container {
+  display: grid;
+
+  /* grid-template-columns: 999fr 1fr 1fr; */
+  /* grid-template-columns: 1fr 2fr 5fr; */
+  /* grid-template-rows: 30rem 30rem 30rem; */
+
+  /* This declares 3 columns, each with a width of 30rem */
+
+  /* grid-template-columns: repeat(3, 30rem); */
+  /* the repeat function creates a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form */
+
+  /* fractional units */
+  grid-template-columns: repeat(4, 1fr);
+  /* the fr unit represents a fraction of the available space in the grid container. The above grid definition would create three equal width tracks that grow and shrink according to the available space */
+
+  gap: 0.5rem;
+  /* creates a gap or gutter of 0.5rem between cells - also show the properties row-gap and column-gap */
+}
+
+/* GRID ITEMS (general styling)*/
+.container div {
+  padding: 2rem;
+  border: 1px solid dimgray;
+  background-color: tomato;
+  color: antiquewhite;
+}
+
+/* ROWS AND MIN-MAX */
+
+.container-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* MINMAX */
+  grid-auto-rows: minmax(2rem, auto);
+  /* this means automatically created rows will be a minimum of 10rem tall, and a maximum of auto. Using auto means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row  */
+  gap: 1rem;
+  /* creates a gap or gutter of 1rem between cells - also show the properties row-gap and column-gap */
+}
+
+
+.container-2 div {
+  padding: 2rem;
+  border: 1px solid dimgray;
+  background-color: blueviolet;
+  color: antiquewhite;
+}
