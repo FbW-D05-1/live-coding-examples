@@ -94,10 +94,10 @@ grid-areas
 /* ************************************ */
 
 #container {
-  /* display: grid; */
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-auto-rows: 10rem; */
-  /* gap: 0.5rem; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 10rem;
+  gap: 0.5rem;
 }
 
 #container div {
@@ -108,3 +108,19 @@ grid-areas
 }
 
 /* POSITIONING INDIVIDUAL GRID ITEMS */
+
+.one {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  /* grid-area: grid-row-start | grid-column-start | grid-row-end | grid-column-end  */
+  /* grid-area: 1 / 1 / span 2 / 4; */
+}
+
+.two {
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
+
+  /* grid-area: 3 / 1 / 5 / 6; */
+}
