@@ -113,7 +113,7 @@ grid-areas
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column-end: span 4;
   /* grid-area: grid-row-start | grid-column-start | grid-row-end | grid-column-end  */
   /* grid-area: 1 / 1 / span 2 / 4; */
 }

@@ -1,0 +1,69 @@
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+
+
+/* ********************************************** */
+
+
+/* grid */
+
+#container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+        "head head"
+        "nav main"
+        "footer footer";
+    /* this property specifies named grid areas, establishing the cells in the grid and assigning them names */
+}
+
+.header {
+    grid-area: head;
+    background-color: rgb(180, 80, 80)
+}
+
+.sidebar {
+    grid-area: nav;
+    background-color: gold;
+}
+
+main {
+    grid-area: main;
+    background-color: hotpink;
+
+    /* aligning items in the cell with flexbox */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flexitem {
+    width: 25rem;
+    padding: 10rem 0;
+    border: 1px solid chartreuse;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(44, 48, 243);
+}
+
+.ali {
+    grid-area: ali;
+    background-color: goldenrod;
+}
