@@ -1,0 +1,31 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: rgb(197, 192, 192);
+  /* ******************************************* */
+}
+body h1 {
+  color: whitesmoke;
+  background-color: rgba(60, 191, 243, 0.883);
+}
+body .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.6rem;
+  margin: 2.5rem 1.5rem;
+}
+body .container img {
+  width: 100%;
+  border-radius: 5px;
+}/*# sourceMappingURL=style.css.map */
