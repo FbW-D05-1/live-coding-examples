@@ -1,0 +1,77 @@
+.parent {
+    background-color: hsl(200, 99%, 36%);
+    height: 400px;
+    width: 400px;
+
+    border-radius: 20%;
+}
+
+/* .child {
+    background-color: hsl(0, 100%, 27%);
+    height: 50%;
+    width: 50%;
+
+
+    transition: <property> || <duration> || <timing-function> || <delay>
+    transition: transform 600ms ease-in 3s, background 1s ease-in;
+
+}
+
+.parent:hover .child {
+    transform: translateX(100%) rotate(-200deg);
+
+    background: hsl(101, 97%, 29%)
+} */
+
+
+.child {
+    background-color: hsl(0, 100%, 27%);
+    height: 50%;
+    width: 50%;
+
+    animation: left-to-right 600ms ease-in-out forwards infinite alternate;
+}
+
+
+
+.parent:hover .child {
+    /*3s delay takes time to activate always at the end*/
+    /*3 after forwards iteration, how many times repeat*/
+    /*after 3 alternate is direction of our animation*/
+    /* animation: left-to-right 600ms ease-in forwards 3 alternate 3s; */
+
+    /* animation-fill-mode: forwards; */
+
+    /* determines if animation is playing or paused */
+
+    animation-play-state: paused;
+}
+
+@keyframes left-to-right {
+
+    /*from to*/
+    0% {
+        transform: translatex(0);
+        background-color: red;
+    }
+
+    33% {
+
+        transform: translateY(100%);
+        background-color: blue;
+    }
+
+    50% {
+        transform: rotate(720deg);
+    }
+
+    66% {
+        transform: translate(100%, 100%);
+        background-color: purple;
+    }
+
+    100% {
+        transform: translatex(100%);
+        background-color: green;
+    }
+}
