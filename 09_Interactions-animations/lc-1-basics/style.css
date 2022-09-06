@@ -71,7 +71,7 @@
     }
 
     100% {
-        transform: translatex(100%);
+        transform: translatex(100%) rotate(720deg);
         background-color: green;
     }
 }
