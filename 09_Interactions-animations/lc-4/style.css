@@ -1,0 +1,121 @@
+/* --------------------------------------------- */
+
+/* FROM TO */
+/* div {
+    width: 300px;
+    height: 300px;
+    background-color: orangered;
+    animation-name: squishy;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes squishy {
+    from {
+        margin-left: -10%;
+        width: 5%;
+    }
+
+    to {
+        margin-left: 50%;
+        width: 40%;
+        background-color: dodgerblue;
+        border-radius: 200%;
+    }
+
+} */
+
+
+/* --------------------------------------------- */
+
+/* CUBIC-BEZIER */
+
+/* div {
+    height: 200px;
+    width: 200px;
+    margin: 20% auto;
+    background-color: greenyellow;
+    transition: 2s;
+    transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+}
+
+div:hover {
+    background-color: cyan;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px rgb(92, 89, 89);
+    transform: rotate(1880deg);
+} */
+
+/* --------------------------------------------- */
+
+/* KEYFRAMES AS PERCENTAGES */
+
+div {
+    height: 200px;
+    width: 200px;
+    margin: 20% auto;
+    box-shadow: 10px 10px 20px rgb(92, 89, 89);
+    background-color: deeppink;
+    animation-name: bouncy;
+    animation-duration: 12s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+}
+
+@media (max-width: 768px) {
+    div {
+        animation-name: scaling;
+        animation-direction: forwards;
+        animation-delay: 1s;
+    }
+}
+
+
+@keyframes scaling {
+
+    100% {
+        transform: scale(3);
+    }
+
+}
+
+@keyframes bouncy {
+    0% {
+        border-radius: 0 0 0 10%;
+        transform: rotate(900deg) translate(-200px, 40px);
+
+    }
+
+    25% {
+
+        border-radius: 50% 0 0 0;
+        /* background-color: deepskyblue; */
+        transform: rotate(-90deg) translate(200px, 450px);
+
+    }
+
+    50% {
+        border-radius: 50% 100% 10% 62%;
+        /* background-color: rgb(247, 160, 160); */
+        width: 80%;
+        transform: rotate(-900deg);
+        box-shadow: 20px 20px 200px rgb(92, 89, 89);
+
+    }
+
+    75% {
+        border-radius: 50% 10% 10% 70%;
+        /* background-color: rgb(7, 163, 28); */
+        width: 10%;
+        transform: rotate(900deg);
+        box-shadow: 20px 20px 20px rgb(92, 89, 89)
+    }
+
+    100% {
+        border-radius: 10% 50% 10% 100%;
+        /* background-color: rgb(15, 11, 243); */
+        width: 50%;
+        transform: rotate(160deg) translate(1100px, 450px);
+        box-shadow: 20px 20px 50px rgb(92, 89, 89)
+    }
+}
