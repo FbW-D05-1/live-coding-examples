@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    bottom: 30vh;
+    width: 100px;
+    height: 100px;
+    clip-path: circle();
+    background: red;
+
+
+    /* chain two animations / apply two animations on the 
+          same time on the same element. 
+          The forward move should be smooth (linear). 
+          For the up-and-down we apply ease-in-out to get this 
+          "bounce from the ground" effect 
+          */
+
+    animation: forward 5s infinite linear,
+        dribbling 0.7s 0.3s infinite ease-in-out;
+
+}
+
+.ground {
+    position: absolute;
+    top: 70vh;
+    left: 0;
+    width: 100%;
+
+    border-top: 20px solid #333;
+}
+
+/* this animation moves the ball forward */
+@keyframes forward {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* this animation moves the ball up and down */
+@keyframes dribbling {
+    0% {
+        transform: translatey(0);
+    }
+
+    50% {
+        transform: translatey(-120px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
