@@ -35,9 +35,9 @@
         .container-{breakpoint} (100% when hitting specified size)
     -->
 
-    <div>
+    <div class="container">
         <h2>Basic grid structure</h2>
-        <div>
+        <div class="row text-center">
             <!-- IMPORANT: cols must go inside a row -->
 
 
@@ -55,41 +55,41 @@
             <!-- Column classes indicate the number of template columns to span 
           (e.g., .col-1 spans one, .col-4 spans four etc..) 
         -->
-            <div>
-                <p>1</p>
+            <div class="col-1">
+                <p class="bg-info">1</p>
             </div>
-            <div>
-                <p>2</p>
+            <div class="col-1">
+                <p class="bg-info">2</p>
             </div>
-            <div>
-                <p>3</p>
+            <div class="col-1">
+                <p class="bg-info">3</p>
             </div>
-            <div>
-                <p>4</p>
+            <div class="col-1">
+                <p class="bg-info">4</p>
             </div>
-            <div>
-                <p>5</p>
+            <div class="col-1">
+                <p class="bg-info">5</p>
             </div>
-            <div>
-                <p>6</p>
+            <div class="col-1">
+                <p class="bg-info">6</p>
             </div>
-            <div>
-                <p>7</p>
+            <div class="col-1">
+                <p class="bg-info">7</p>
             </div>
-            <div>
-                <p>8</p>
+            <div class="col-1">
+                <p class="bg-info">8</p>
             </div>
-            <div>
-                <p>9</p>
+            <div class="col-1">
+                <p class="bg-info">9</p>
             </div>
-            <div>
-                <p>10</p>
+            <div class="col-1">
+                <p class="bg-info">10</p>
             </div>
-            <div>
-                <p>11</p>
+            <div class="col-1">
+                <p class="bg-info">11</p>
             </div>
-            <div>
-                <p>12</p>
+            <div class="col-1">
+                <p class="bg-info">12</p>
             </div>
 
             <!-- what happens if I add more than 12? (col will wrap) -->
@@ -104,9 +104,9 @@
         <!-- What if we want responsive columns ? -->
         <!-- for that we need size-specific classes -->
 
-        <div>
+        <div class="container">
             <h2>Responsive grid</h2>
-            <div>
+            <div class="row text-center">
                 <!-- 
               Responsive cols classes have the following structure:
               col-{breakpoint}-{num of cols}
@@ -117,31 +117,31 @@
 
               We don't need to specify anything for mobile cos we want the cols to take up entire width
             -->
-                <div>
-                    <p>1</p>
+                <div class="col-md-6 col-lg-3">
+                    <p class="bg-primary">1</p>
                 </div>
-                <div>
-                    <p>2</p>
+                <div class="col-md-6 col-lg-3">
+                    <p class="bg-primary">2</p>
                 </div>
-                <div>
-                    <p>3</p>
+                <div class="col-md-6 col-lg-3">
+                    <p class="bg-primary">3</p>
                 </div>
-                <div>
-                    <p>4</p>
+                <div class="col-md-6 col-lg-3">
+                    <p class="bg-primary">4</p>
                 </div>
             </div>
         </div>
 
 
         <!-- Can I have cols of different sizes on the same row? of course! -->
-        <div>
+        <div class="container">
             <h2>Columns with different sizes</h2>
-            <div>
-                <div>
-                    <p>Large column</p>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="bg-warning">Large column</p>
                 </div>
-                <div>
-                    <p>Small column</p>
+                <div class="col-md-4">
+                    <p class="bg-warning">Small column</p>
                 </div>
             </div>
         </div>
@@ -160,47 +160,47 @@
         padding and gutter work the same way.
         You just need to replace the "m" of margin with "p" for padding or "g" for gutter
     -->
-        <div>
-            <h2>Spacing</h2>
-            <p>
+        <div class="container">
+            <h2 class="mb-5">Spacing</h2>
+            <p class="ms-5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio
                 id doloribus aspernatur, beatae accusamus hic, explicabo ipsa nam eos
                 possimus culpa perspiciatis sed sit ad ea amet, nemo magni.
             </p>
 
             <!-- To add space between cols we can add some gutter -->
-            <div>
-                <div>
+            <div class="row g-5">
+                <div class="col-md-4">
                     <!-- lets add some padding -->
-                    <p>AA</p>
+                    <p class="bg-primary ps-2">AA</p>
                 </div>
-                <div>
-                    <p>BB</p>
+                <div class="col-md-4">
+                    <p class="bg-secondary">BB</p>
                 </div>
-                <div>
+                <div class="col-md-4">
                     <!-- 
             lets add a margin for large screens only 
             {property}{side}-{breakpoint}-{size}
           -->
-                    <p>CC</p>
+                    <p class="bg-info ms-lg-5">CC</p>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <div>
+        <div class="container">
             <h2>Display </h2>
 
             <!-- The class for the display property is "d" -->
-            <div>An inline DIV </div>
-            <span>A display block SPAN</span>
+            <div class="d-inline bg-info">An inline DIV </div>
+            <span class="d-block bg-info">A display block SPAN</span>
 
             <h2>Display Flex </h2>
-            <div style="height:400px">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+            <div class="d-flex justify-content-between align-items-center bg-warning" style="height:400px">
+                <div class="bg-primary p-5 align-self-start">1</div>
+                <div class="bg-primary p-5 align-self-end">2</div>
+                <div class="bg-primary p-5">3</div>
             </div>
             <!-- what if I want flex only on lg screen? (d-lg-flex line 202)-->
         </div>

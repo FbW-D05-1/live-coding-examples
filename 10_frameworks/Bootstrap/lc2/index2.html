@@ -71,14 +71,14 @@
 
     <!-- NAVIGATION END -->
 
-    <section>
+    <section class="bg-dark text-light p-5 mt-5 text-center text-sm-start">
         <!--Use a container when you dont want things to go up against the edges -->
-        <div>
+        <div class="container">
             <!-- 
               using size classes we can make our items responsive
               d-sm-flex: flex kicks in once we reach sm size  
             -->
-            <div>
+            <div class="d-sm-flex align-items-center">
                 <!-- 
                 img-fluid to have img bound to its container 
                 w-50: width 50%
@@ -88,64 +88,64 @@
                 <!-- VECTOR IMAGES undraw.co -->
                 <img class="img-fluid d-none d-md-block w-50" src="/images/img1.png" alt="" />
 
-                <div>
-                    <h1>Become a <span> Web Developer</span></h1>
-                    <p>
+                <div class="px-5">
+                    <h1>Become a <span class="text-warning"> Web Developer</span></h1>
+                    <p class="lead my-4">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
                         facilis, dolores odit ut, impedit a sequi natus nobis praesentium
                         placeat recusandae modi nesciunt. Tempore quis architecto quia
                         mollitia, animi ipsa!
                     </p>
 
-                    <button>Enroll</button>
+                    <button class="btn btn-warning btn-lg">Enroll</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- BOXES -->
-    <section>
-        <div>
+    <section class="p-5">
+        <div class="container">
             <!-- In order to use grid we need to have a class of row -->
-            <div>
+            <div class="row text-center g-4">
                 <!-- creating 3 equal columns -->
                 <!-- add text-center to center cols -->
-                <div>
-                    <div>
-                        <div>
-                            <i></i>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body">
+                            <i class="fs-1 bi bi-laptop"></i>
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <i></i>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body">
+                            <i class="fs-1 bi bi-alarm"></i>
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <div>
-                            <i></i>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-4">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body">
+                            <i class="fs-1 bi bi-twitter"></i>
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -160,8 +160,8 @@
 
 
     <!-- ACCORDION -->
-    <section>
-        <h2>Some new section</h2>
+    <section class="p-5">
+        <h2 class="text-center mb-5">Some new section</h2>
         <div class="container">
             <div class="accordion accordion-flush" id="accordionExample">
                 <div class="accordion-item">
@@ -235,64 +235,66 @@
         </div>
     </section>
 
-    <section>
-        <h2>Playing with the grid</h2>
-        <div>
-            <div>
+    <section class="p-5 bg-dark text-light">
+        <h2 class="text-center py-5">Playing with the grid</h2>
+        <div class="container">
+            <div class="row">
 
-                <div>
-                    <div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark">
                         <!-- forget border radius.. add class rounded-circle-->
-                        <img src="https://source.unsplash.com/300x300/?color" alt="..." />
-                        <div>
-                            <h5>Card title</h5>
-                            <p>
+                        <img src="https://source.unsplash.com/300x300/?color" class="card-img-top rounded-circle"
+                            alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        <img src="https://source.unsplash.com/300x300/?paint" alt="..." />
-                        <div>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark">
+                        <img src="https://source.unsplash.com/300x300/?paint" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        <img src="https://source.unsplash.com/300x300/?color" alt="..." />
-                        <div>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark">
+                        <img src="https://source.unsplash.com/300x300/?color" class="card-img-top" alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <div>
-                        <img src="https://source.unsplash.com/300x300/?paint" alt="..." />
-                        <div>
-                            <h5>Card title</h5>
-                            <p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-dark">
+                        <img src="https://source.unsplash.com/300x300/?paint" class="card-img-top rounded-circle"
+                            alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">
                                 Some quick example text to build on the card title and make up
                                 the bulk of the card's content.
                             </p>
-                            <a href="#">Go somewhere</a>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
                         </div>
                     </div>
                 </div>
