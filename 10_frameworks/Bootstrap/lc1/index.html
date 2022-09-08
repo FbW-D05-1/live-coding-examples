@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <title>Bootstrap 101</title>
+</head>
+
+<body>
+    <!-- let's add a basic tag with no styles -->
+    <h1>Hi there!</h1>
+    <!-- now let's add bootstrap cdn and see what happens -->
+    <!-- INSPECT H1 AND SHOW STYLES ADDED BY BOOTSTRAP-->
+
+    <!-- What is bootstrap and why do we need it? -->
+
+    <!--
+        Bootstrap is based on a 12 col grid..
+        Before setting up our grid we need to spend a few words about containers:
+
+        Containers are the most basic layout element in Bootstrap and are required 
+        when using our default grid system. 
+        Containers are used to contain, pad, and (sometimes) center the content within them.
+
+        Let's take a look at some of the container classes bootstrap has to offer:
+
+        .container (like margin auto)
+        .container-fluid (flush)
+        .container-{breakpoint} (100% when hitting specified size)
+    -->
+
+    <div>
+        <h2>Basic grid structure</h2>
+        <div>
+            <!-- IMPORANT: cols must go inside a row -->
+
+
+            <!-- 
+          Bootstrap is based on a 12 cols layout 
+          That means that if you add more than 12 cols in a row, 
+          the exeeding ones will jump to the next line.
+
+          All columns have equal size.
+        
+          Let's create 12 cols containing a paragraph with a class of .bg-info (blue bg color)
+          .col-1*12>p.bg-info{$}
+        -->
+
+            <!-- Column classes indicate the number of template columns to span 
+          (e.g., .col-1 spans one, .col-4 spans four etc..) 
+        -->
+            <div>
+                <p>1</p>
+            </div>
+            <div>
+                <p>2</p>
+            </div>
+            <div>
+                <p>3</p>
+            </div>
+            <div>
+                <p>4</p>
+            </div>
+            <div>
+                <p>5</p>
+            </div>
+            <div>
+                <p>6</p>
+            </div>
+            <div>
+                <p>7</p>
+            </div>
+            <div>
+                <p>8</p>
+            </div>
+            <div>
+                <p>9</p>
+            </div>
+            <div>
+                <p>10</p>
+            </div>
+            <div>
+                <p>11</p>
+            </div>
+            <div>
+                <p>12</p>
+            </div>
+
+            <!-- what happens if I add more than 12? (col will wrap) -->
+
+            <!-- <div class="col-1">
+          <p class="bg-info">13</p>
+        </div> -->
+
+        </div>
+
+
+        <!-- What if we want responsive columns ? -->
+        <!-- for that we need size-specific classes -->
+
+        <div>
+            <h2>Responsive grid</h2>
+            <div>
+                <!-- 
+              Responsive cols classes have the following structure:
+              col-{breakpoint}-{num of cols}
+              Available breakpoints: sm, md, lg, xl, xxl
+
+              An item with a class of col-md-6 will take up 6 cols on md devices (2 items per row)
+              col-lg-3 will take up 3 cols on lg devices (4 items per row )
+
+              We don't need to specify anything for mobile cos we want the cols to take up entire width
+            -->
+                <div>
+                    <p>1</p>
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+                <div>
+                    <p>3</p>
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Can I have cols of different sizes on the same row? of course! -->
+        <div>
+            <h2>Columns with different sizes</h2>
+            <div>
+                <div>
+                    <p>Large column</p>
+                </div>
+                <div>
+                    <p>Small column</p>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <!--
+        Lets talk bout spacing ( margin/padding/gutter )
+        Both margin and padding can take a value that goes from 0 to 5 (eg. m-5 margin all around)
+
+        You can also be more specific with the following classes:
+        mt/mb ( mt margin top - mb margin bottom )
+        ms/me ( ms margin start - me margin end )
+        mx/my ( mx for both left/right - my for both top/bottom )
+
+        padding and gutter work the same way.
+        You just need to replace the "m" of margin with "p" for padding or "g" for gutter
+    -->
+        <div>
+            <h2>Spacing</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi odio
+                id doloribus aspernatur, beatae accusamus hic, explicabo ipsa nam eos
+                possimus culpa perspiciatis sed sit ad ea amet, nemo magni.
+            </p>
+
+            <!-- To add space between cols we can add some gutter -->
+            <div>
+                <div>
+                    <!-- lets add some padding -->
+                    <p>AA</p>
+                </div>
+                <div>
+                    <p>BB</p>
+                </div>
+                <div>
+                    <!-- 
+            lets add a margin for large screens only 
+            {property}{side}-{breakpoint}-{size}
+          -->
+                    <p>CC</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>Display </h2>
+
+            <!-- The class for the display property is "d" -->
+            <div>An inline DIV </div>
+            <span>A display block SPAN</span>
+
+            <h2>Display Flex </h2>
+            <div style="height:400px">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <!-- what if I want flex only on lg screen? (d-lg-flex line 202)-->
+        </div>
+    </div>
+
+</body>
+
+</html>

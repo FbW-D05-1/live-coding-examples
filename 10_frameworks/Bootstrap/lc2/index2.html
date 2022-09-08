@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <!-- Bootstrap also comes with its set of icons but we need to include them -->
+    <!-- Including bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="styles2.css">
+
+    <title>Bootstrap in action</title>
+</head>
+
+<body>
+
+
+
+    <!-- lets familiarize with some components -->
+
+
+    <!-- 
+    navbar-dark: font white
+    bg-dark
+    text-center: align center
+    text-sm-start: will align text to left for sm devices
+    -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <!-- fixed-top -->
+        <div class="container">
+            <a class="navbar-brand" href="#">{ MyBrand }</a>
+            <!-- button data-bs-target must have same value as ul parent ID -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <!-- ms-auto!!!!!!!!!!!!!!! to push ul to the right -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVIGATION END -->
+
+    <section>
+        <!--Use a container when you dont want things to go up against the edges -->
+        <div>
+            <!-- 
+              using size classes we can make our items responsive
+              d-sm-flex: flex kicks in once we reach sm size  
+            -->
+            <div>
+                <!-- 
+                img-fluid to have img bound to its container 
+                w-50: width 50%
+                w-25 / w-50 / w-75 / w-100 / w-auto /
+            -->
+
+                <!-- VECTOR IMAGES undraw.co -->
+                <img class="img-fluid d-none d-md-block w-50" src="/images/img1.png" alt="" />
+
+                <div>
+                    <h1>Become a <span> Web Developer</span></h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel,
+                        facilis, dolores odit ut, impedit a sequi natus nobis praesentium
+                        placeat recusandae modi nesciunt. Tempore quis architecto quia
+                        mollitia, animi ipsa!
+                    </p>
+
+                    <button>Enroll</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOXES -->
+    <section>
+        <div>
+            <!-- In order to use grid we need to have a class of row -->
+            <div>
+                <!-- creating 3 equal columns -->
+                <!-- add text-center to center cols -->
+                <div>
+                    <div>
+                        <div>
+                            <i></i>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <i></i>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <i></i>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 
+    now if we use cols our cols are gonna sit next to each other on mobile as well.. 
+    and we don't want that 
+    GO BACK AND REPLACE "col" with "col-md"
+-->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ACCORDION -->
+    <section>
+        <h2>Some new section</h2>
+        <div class="container">
+            <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <!-- the Id has to match the data-bs-target (see up) for toggle to work -->
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong> It is
+                            shown by default, until the collapse plugin adds the appropriate
+                            classes that we use to style each element. These classes control
+                            the overall appearance, as well as the showing and hiding via
+                            CSS transitions. You can modify any of this with custom CSS or
+                            overriding our default variables. It's also worth noting that
+                            just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is
+                            hidden by default, until the collapse plugin adds the
+                            appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing
+                            and hiding via CSS transitions. You can modify any of this with
+                            custom CSS or overriding our default variables. It's also worth
+                            noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is
+                            hidden by default, until the collapse plugin adds the
+                            appropriate classes that we use to style each element. These
+                            classes control the overall appearance, as well as the showing
+                            and hiding via CSS transitions. You can modify any of this with
+                            custom CSS or overriding our default variables. It's also worth
+                            noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit
+                            overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Playing with the grid</h2>
+        <div>
+            <div>
+
+                <div>
+                    <div>
+                        <!-- forget border radius.. add class rounded-circle-->
+                        <img src="https://source.unsplash.com/300x300/?color" alt="..." />
+                        <div>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="https://source.unsplash.com/300x300/?paint" alt="..." />
+                        <div>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="https://source.unsplash.com/300x300/?color" alt="..." />
+                        <div>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="https://source.unsplash.com/300x300/?paint" alt="..." />
+                        <div>
+                            <h5>Card title</h5>
+                            <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                            </p>
+                            <a href="#">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
