@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dinner, .lunch, .breakfast {
+  color: #333333;
+  border: 1px solid crimson;
+  margin: 0 0 10px 0;
+  padding: 15px;
+}
+
+.lunch {
+  background-color: yellow;
+}
+
+.dinner {
+  background-color: orange;
+}
+
+.p-1 {
+  border: dotted 3px red;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.p-2 {
+  border: dotted 3px rgb(18, 196, 33);
+  background: rgba(18, 196, 33, 0.3);
+}
+
+.p-3 {
+  border: dotted 3px blue;
+  background: rgba(0, 0, 255, 0.3);
+}
+
+h1 {
+  color: aqua;
+  font-weight: 100;
+}
+
+.p-3 {
+  padding: 20px;
+}/*# sourceMappingURL=main.css.map */

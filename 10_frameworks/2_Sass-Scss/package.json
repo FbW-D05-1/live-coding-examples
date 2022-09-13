@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "rm -rf dev-serve && parcel index.html --dist-dir dev-serve"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "parcel": "^2.7.0"
+  }
+}
