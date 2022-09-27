@@ -65,7 +65,7 @@ let counter = 2;
 console.log(counter++);
 // 2 + 1
 console.log(counter);
-// 3 + 1
+// 1 + 3
 console.log(++counter);
 
 let counter2 = 2;
