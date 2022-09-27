@@ -73,3 +73,9 @@ let counter2 = 2;
 console.log(counter2--);
 console.log(counter2);
 console.log(--counter2);
+
+// const lifePoints = 100;
+
+// let damaged = lifePoints - 20;
+
+// console.log(damaged);
