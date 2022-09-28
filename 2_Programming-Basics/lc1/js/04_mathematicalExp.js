@@ -17,14 +17,24 @@ console.log("Good morning" + "Class" + 32);
 console.log(10 % 3);
 
 // Operand: is what operators are applied to.
+let varOne = 8;
+console.log(varOne); // 8
+// reassignment of varOne
+varOne = -varOne; //unary
+console.log(varOne); // -8
 
 // 5 * 2 : 2 operands 5 and 2.
-
+const varTwo = 5;
+const varThree = 8;
+const sum = varThree + varTwo;
+console.log(sum); //13
 // operator: +
 // operands: 5 and 8
 // operation: binary because two operands are involved
 
 // exponentiation- **
+console.log(2 ** 2);
+console.log(20 ** 100);
 
 // String concatenation with binary
 
