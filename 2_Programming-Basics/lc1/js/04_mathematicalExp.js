@@ -27,6 +27,7 @@ console.log(varOne); // -8
 const varTwo = 5;
 const varThree = 8;
 const sum = varThree + varTwo;
+const rootOfThre = varThree.Math.pow(n, 1 / root);
 console.log(sum); //13
 // operator: +
 // operands: 5 and 8

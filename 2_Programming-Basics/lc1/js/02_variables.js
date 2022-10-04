@@ -23,3 +23,5 @@ console.log(lastName);
 
 // otherName = "Dave";
 // console.log(otherName);
+
+// var = let
