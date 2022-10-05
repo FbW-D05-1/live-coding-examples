@@ -89,3 +89,22 @@ const varTwo = 10;
 // Check if varThree exists. If truthy, print - "varThree exists!".
 
 // ---------###--------
+if ((varOne >= varTwo && 120 % 2 === 0) || varOne * 260 === 2600) {
+  // local scope
+
+  console.log("Heya!"); // Heya!
+
+  //  condition               if truthy                                  if falsy
+  12 > 2
+    ? console.log(`The condition is true.`)
+    : console.log(`The condition is false.`);
+  // The condition is true.
+
+  const varThree = 1;
+
+  if (varThree) {
+    console.log("varThree exists!"); // varThree exists!
+  }
+} // no else block required!
+
+// ---------###--------
