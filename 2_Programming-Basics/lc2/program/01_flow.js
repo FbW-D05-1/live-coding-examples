@@ -31,10 +31,10 @@ console.log(++number);
 // 9. Eat it!
 
 // Order is important, we need to tell the computer each single step
-// he doesn't know anything !!! we can google :D but the computer cannot..
+// he doesn't know anything !!! we can google but the computer cannot..
 // if you don't how exactly to do a lasagna, search for a recipe! => get the algorithm!
 
-// Lets make DUMPLINGS :D
+// Lets make DUMPLINGS
 // INPUT: Flour, Yeast, Vegetables, Spring Onion, Carrots, Mince, Spices (Salt, Pepper, Sugar, Soya Sauce...)
 // 1. Make the dough (500g + 340g of Water + 3g Yeast + 5g Salt + 15g Sugar )
 // 2. Let it sit half an hour...
