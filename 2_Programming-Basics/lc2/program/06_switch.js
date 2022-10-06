@@ -46,7 +46,7 @@ if (month === 1) {
 // cannot check for bigger than // smaller than
 
 switch (month) {
-  case month <= 5:
+  case 5:
     console.log("Its January!");
     break;
   case 2:
