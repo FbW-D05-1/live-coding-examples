@@ -187,7 +187,7 @@ let agE = 13;
 // If age is grater than/equal to 20 AND less than 30, print ${firstname} is a young man.
 // Else print ${firstname} is a man.
 
-if (agE <= 13) {
+if (agE < 13) {
   console.log(`${firstName} is a kid.`);
 } else if (13 <= agE < 20) {
   console.log(`${firstName} is a teenager.`);
