@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Function Declaration vs Function Expressions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <h1><u>Function Declaration vs Function Expression</u></h1>
+
+    <h2><u>Function Expression</u></h2>
+    <h3> - A Function Expression is created when the execution reaches it and is usable from then on.</h3>
+
+    <h3> - Once the execution flow passes to the right side of the assignment let sum = function… , the function is
+        created and can be used (assigned, called, etc. ) from now on.</h3>
+
+    <h3> - Function Expressions are created when the execution reaches them. </h3>
+
+    <h2><u>Function Declaration</u></h2>
+    <h3> - A Function Declaration is usable in the whole script/code block. </h3>
+    <h3> - When JavaScript prepares to run the script or a code block, it first looks for Function Declarations in it
+        and creates the functions. We can think of it as an “initialization stage”.</h3>
+    <h3> - After all of the Function Declarations are processed, the execution goes on.</h3>
+
+    <h3> - A function declared as a Function Declaration can be called earlier than it is defined. </h3>
+
+    <h3> - When a Function Declaration is made within a code block, it is visible everywhere inside that block. But not
+        outside of it. </h3>
+
+    <h2><u>When should you choose Function Declaration versus Function Expression?</u></h2>
+
+    <h3> First consider Function Declaration syntax. It gives more freedom in how to organize our code, because we can
+        call such functions before they are declared. </h3>
+
+    <h3> Function Declarations are more “eye-catching”. </h3>
+</body>
+
+</html>

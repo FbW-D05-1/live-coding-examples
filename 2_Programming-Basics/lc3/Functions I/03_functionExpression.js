@@ -15,9 +15,20 @@
 // We can pass it between variables and run when we want.
 
 // 1.
+const sayHi = function () {
+  console.log("Hello");
+};
 
 // ---------##---------
 // 2.
+
+function sayHi2() {
+  console.log("Hello");
+}
+
+const func = sayHi2;
+
+sayHi();
 
 // Please note again: there are no parentheses after sayHi.
 // If there were, then func = sayHi() would write the result of the call sayHi() into func, not the function sayHi itself.
@@ -27,11 +38,43 @@
 // ---------##---------
 // 3.
 
+const square = function (number) {
+  return number * number;
+};
+const x = square(4);
+console.log(x);
+
 // ---------##---------
 // 4.
+const age = 20;
+
+const welcome =
+  age < 18
+    ? function () {
+        console.log("Hello!");
+      }
+    : function () {
+        console.log("Greetings");
+      };
+
+welcome();
 
 // ---------##---------
 // 5.
+
+const fizzBuzz = function (myNum) {
+  if (myNum % 3 == 0 && myNum % 5 == 0) {
+    console.log("FizzBuzz");
+  } else if (myNum % 3 == 0) {
+    console.log("Fizz");
+  } else if (myNum % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log("Not divisable", myNum);
+  }
+};
+
+fizzBuzz(4);
 
 // ---------##---------
 
