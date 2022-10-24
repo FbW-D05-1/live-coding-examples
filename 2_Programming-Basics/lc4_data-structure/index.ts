@@ -81,3 +81,31 @@ let DciStuds: DciStudsInterface[]= [
 ]
 
 console.log(DciStuds[2].name);
+
+
+/** interface for our object */
+interface scblObj {
+    tile: string,
+    score: number,
+}
+
+/** our array of objects containing tiles and scores */
+const scrabbleHand:scblObj[] = [
+    { tile: "N", score: 1 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 10 },
+    { tile: "X", score: 8 },
+    { tile: "D", score: 2 },
+    { tile: "A", score: 1 },
+    { tile: "E", score: 1 },
+  ];
+
+/** function to check if an object is empty: returns a boolean */
+function isEmpty(obj: object) {
+    return Object.keys(obj).length === 0;
+}
+
+
+
+isEmpty({});
+
