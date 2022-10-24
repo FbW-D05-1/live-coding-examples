@@ -100,7 +100,9 @@ const scrabbleHand:scblObj[] = [
     { tile: "E", score: 1 },
   ];
 
-/** function to check if an object is empty: returns a boolean */
+/** function to check if an object is empty: returns a boolean 
+ * TODO: BADABIM BADABOOM idk change something
+*/
 function isEmpty(obj: object) {
     return Object.keys(obj).length === 0;
 }
