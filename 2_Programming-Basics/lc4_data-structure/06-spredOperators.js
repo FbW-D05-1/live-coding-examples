@@ -83,6 +83,9 @@ console.log(clonedArr3); // [ 3, 5, 1 ]
 
 const str = "Hello";
 
+console.log("H", "e", "l", "l", "o");
+console.log(...str.toLowerCase());
+
 console.log([...str]); // H,e,l,l,o
 
 // OR
@@ -127,3 +130,4 @@ const myNumbers3 = [2, 4, 6, 8, 21, 456, 645];
 // using spread syntax in a function call to pass an array of numbers
 console.log(sumAll(...myNumbers)); // 497
 console.log(sumAll(...myNumbers, ...myNumbers3)); // 1639
+console.log(sumAll3(21314, ...myNumbers, 15, ...myNumbers3, 40));
