@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rest parameters & Spread syntax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!-- Why does this file exist? Why is this not in the .md? -->
+    <h1>Summary</h1>
+
+    <p>
+        When we see "..." in the code, it is either rest syntax or the
+        spread syntax. <small>Reminder: both are often referred to as
+            "rest operator" or "spread operator"</small>
+    </p>
+
+    <p>There’s an easy way to distinguish between them:</p>
+
+    <ul>
+        <li>When ... is at the end of function parameters, it’s “rest parameters” and gathers the rest of the list of
+            arguments into an array.</li>
+        <li>When ... occurs in a function call or alike, it’s called a “spread syntax“ and expands an array into a list.
+        </li>
+    </ul>
+
+    <h2>Use patterns:</h2>
+
+    <ul>
+        <li>Rest parameters are used to create functions that accept any number of arguments.</li>
+        <li>The spread syntax is used to pass an array to functions that normally require a list of many arguments.</li>
+    </ul>
+
+    <p>
+        Together they help to travel between a list and an array of
+        parameters with ease. All arguments of a function call are also
+        available in “old-style” arguments: array-like iterable object
+        (although that option is very rarely used).
+    </p>
+</body>
+
+</html>
