@@ -16,7 +16,7 @@ let Obj = {
   lieblingsStadt: "Marburg",
   lieblingsZahl: 69,
   details() {
-    return `Mein name ist ${Obj.vollName}, ich bin ein ${Obj.job}, irgendwann möchte ich in ${Obj.lieblingsStadt} wohnen`;
+    return `Mein name ist ${this.vollName}, ich bin ein ${this.job}, irgendwann möchte ich in ${this.lieblingsStadt} wohnen`;
   },
 };
 
@@ -34,6 +34,18 @@ console.log("Job Beschreibung", jobBeschreibung);
 // 3. detstructuring
 
 let { fähigkeit, details, lieblingsZahl } = Obj;
-console.log(typeof details());
+console.log(details());
 console.log("Fähigkeiten", fähigkeit);
 console.log("Fähigkeiten", Array.isArray(fähigkeit));
+
+// bind () https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
+
+const detailsGet = Obj.details;
+console.log(detailsGet());
+
+const fixedDetails = detailsGet.bind(Obj);
+
+console.log(fixedDetails());
+
+const oneLine = Obj.details.bind(Obj);
+console.log(oneLine());
