@@ -130,4 +130,4 @@ const myNumbers3 = [2, 4, 6, 8, 21, 456, 645];
 // using spread syntax in a function call to pass an array of numbers
 console.log(sumAll(...myNumbers)); // 497
 console.log(sumAll(...myNumbers, ...myNumbers3)); // 1639
-console.log(sumAll3(21314, ...myNumbers, 15, ...myNumbers3, 40));
+console.log(sumAll(21314, ...myNumbers, 15, ...myNumbers3, 40));
