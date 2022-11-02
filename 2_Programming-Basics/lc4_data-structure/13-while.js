@@ -19,6 +19,16 @@ while (i < 2) {
   // and that means that this while loop will stop and it will skip the loop and go to the next line of code below
 }
 
+//Do While
+
+do {
+  // do the job: run the loop
+  console.log(i);
+  i++;
+} while (i < 2); // and only afterwards check the condition
+
+// first the loop runs trough and then the condition is checked
+
 //this is how while loops work
 
 //FizzBuzz with a while loop
