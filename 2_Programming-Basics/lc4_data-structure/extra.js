@@ -43,11 +43,3 @@ products.forEach((product) => {
 });
 
 console.log(totalPrice);
-
-const reducedPrice = products.reduce((total, product) => {
-  console.log(`Total: ${total}`);
-  console.log(`productPrice: ${product.price}`);
-  return total + product.price;
-}, 0);
-
-console.log(reducedPrice);
