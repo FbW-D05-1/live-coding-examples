@@ -23,7 +23,7 @@ first();
 // function firstFunc() {
 //   setTimeout(function () {
 //     console.log(2);
-//   }, 50);
+//   }, 500);
 // }
 function secondFunc() {
   console.log(3);

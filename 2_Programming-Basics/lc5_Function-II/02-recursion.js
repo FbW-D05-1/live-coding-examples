@@ -65,3 +65,4 @@ const factor1 = (number) => {
 console.log(factor1(6));
 
 // https://www.sitepoint.com/recursion-functional-javascript/
+// GlubberFlooop
