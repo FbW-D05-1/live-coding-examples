@@ -150,8 +150,6 @@ console.log("==================================");
 // Ein Objekt kann sich auf verschiedene Weise unterscheiden, und jede realisierte Variante dieses Objekts ist eine Instanz.
 // Das Erstellen einer realisierten Instanz wird als Instanziierung bezeichnet. In der Informatik kann eine Instanz die Form eines Dokumenttyps oder eines Elements annehmen.
 
-// Static wird benutzt, wenn die Methode oder Struktur ohne dazugehoeriges Objekt aufgerufen werden kann
-
 class Vehicle {
   constructor(type, speed) {
     this.type = type;
@@ -164,6 +162,7 @@ class Vehicle {
     console.log(this.type, this.speed, "stop");
   }
   // static: when I want to call directly on the vehicle class.
+  // Static wird benutzt, wenn die Methode oder Struktur ohne dazugehoeriges Objekt aufgerufen werden kann
   static info() {
     return console.log("Vehicle is a base vehicle class");
   }
