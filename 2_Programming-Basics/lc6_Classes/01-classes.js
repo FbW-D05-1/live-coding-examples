@@ -194,3 +194,17 @@ class Car extends Vehicle {
 const BMW = new Car("E45", 100);
 
 BMW.emergencyBoost();
+
+class Random {
+  constructor(name) {
+    this.name = name;
+  }
+  hi() {
+    console.log(this.name);
+  }
+}
+
+const test = new Random();
+const test2 = new Random();
+
+console.log(test === test2);
