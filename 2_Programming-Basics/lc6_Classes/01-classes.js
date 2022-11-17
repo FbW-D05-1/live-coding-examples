@@ -195,16 +195,13 @@ const BMW = new Car("E45", 100);
 
 BMW.emergencyBoost();
 
-class Random {
-  constructor(name) {
+class Students {
+  constructor(name, classRoom, age) {
     this.name = name;
-  }
-  hi() {
-    console.log(this.name);
+    this.classRoom = classRoom;
+    this.age = age;
   }
 }
 
-const test = new Random();
-const test2 = new Random();
-
-console.log(test === test2);
+const stud = new Students("John", 15, 32);
+console.log(stud);

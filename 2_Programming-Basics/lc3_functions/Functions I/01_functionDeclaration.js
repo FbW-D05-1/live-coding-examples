@@ -46,11 +46,11 @@ console.log(userName);
 const userName2 = "Jane";
 
 function printHello() {
-  const userName2 = "Doe";
+  const userName2 = "Dpe";
   const message = `Hello ${userName2}`;
   console.log(message);
 }
-// const userName2 = "ddd" Error
+
 printHello();
 console.log(userName2);
 // ---------##---------

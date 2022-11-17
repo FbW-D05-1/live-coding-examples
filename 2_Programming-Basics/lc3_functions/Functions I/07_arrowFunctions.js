@@ -107,3 +107,65 @@ const power = (base, exponent) => {
 };
 
 console.log(power(2, 4));
+
+function validate(email) {
+  let atSymPos;
+  let atSymCounter = 0;
+  let dotPos;
+
+  for (let i = 0; i < email.length; i++) {
+    if (email[i] === "@") {
+      atSymCounter++;
+      atSymPos = i;
+      if (atSymPos === dotPos + 1) {
+        return `${email} is invalid: "." found directly before "@"`; //checks if "." is directly before "@"
+      }
+      // inspect code at work: console.log(`@ located at ${atSymPos}`);
+    }
+    if (email[i] === ".") {
+      dotPos = i; // NB: if there are multiple dots, Pos will indicate last dot placement
+      // inspect code at work: console.log(`. located at ${dotPos}`);
+      if (dotPos === atSymPos + 1) {
+        // checks if "." is directly after "@"
+        return `${email} is invalid: "." found directly after "@"`;
+      }
+      if (email[dotPos + 1] === ".") {
+        // checks if there are consecutive "."
+        return `${email} is invalid: consecutive "." found`;
+      }
+    }
+  }
+
+  if (atSymCounter !== 1 || atSymPos === 0 || atSymPos === email.length - 1) {
+    //checks if we have exactly 1 "@" character AND that the "@" is NOT first or last character
+    return `${email} is invalid: "@" syntax error`;
+  } else if (
+    email[0] === "." ||
+    dotPos < atSymPos ||
+    dotPos === email.length - 1
+  ) {
+    // checks if "." is first character, AND if there is no "." after "@", AND "." is NOT last character
+    return `${email} is invalid: "." syntax error`;
+  } else {
+    return `${email} is valid`;
+  }
+}
+
+const isValidateEmail = (str) => {
+  return Boolean(
+    str
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  );
+};
+
+console.log(validate("j@example.com"));
+console.log(validate("@example.com)"));
+console.log(validate("john.smith@com"));
+console.log(validate("john.smith@email.com"));
+console.log(validate("personal.@fran.borg"));
+console.log(validate("jennaIsAwesome@..mail.com"));
+console.log(validate("hereComes...jenna@mail.com"));
+console.log(validate("lastOne@orIsIt.com."));

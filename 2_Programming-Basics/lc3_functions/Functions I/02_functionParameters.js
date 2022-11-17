@@ -90,5 +90,8 @@ function userInfo(firstName, lastName, email, dateOfBirth) {
 
 userInfo("John", "Doe", "John@ddd.com");
 
+const sayHi = function () {
+  console.log("Hello");
+};
 
-  
+sayHi();
