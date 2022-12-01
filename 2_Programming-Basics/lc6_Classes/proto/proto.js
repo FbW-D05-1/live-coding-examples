@@ -13,9 +13,10 @@ function Nums() {
 //         this.y = 200
 //     }
 //     show = function () {
-//         console.log("Hello");
+//         console.log("Hello");function
 //       };
 // }
+const ver = document.innerText;
 
 Nums.prototype.show = function () {
   console.log("Hello");
