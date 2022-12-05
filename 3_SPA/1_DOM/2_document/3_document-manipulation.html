@@ -42,6 +42,15 @@
     </div>
 
     <script>
+        const containerElement = document.querySelector('.container');
+        const titleElement = document.getElementById('title');
+        let loremElements = document.getElementsByClassName('lorem');
+        const subTitleElement = document.querySelector('#subtitle > span');
+        const allListItems = document.querySelectorAll('#list > li.item');
+
+
+
+
         /**
          * Element.style;
          * @description Das style objekt bietet uns die möglichkeit den CSS-Style von elementen auszugeben, oder abzuändern
@@ -51,7 +60,17 @@
 
         // styles werden in JS anders geschrieben:
         // zum beispiel: border-radius wird zu borderRadius
+        const paddingSize = 100;
 
+        console.log(titleElement.style)
+
+        titleElement.style.textAlign = 'center';
+
+        titleElement.style.background = 'hotpink';
+
+        titleElement.style.padding = `${paddingSize}px`
+
+        titleElement.style.color = "burlywood"
 
 
         /**
@@ -61,6 +80,7 @@
          * @returns { string }
          */
 
+        loremElements[1].innerHTML = `<h1> Titel ${paddingSize}</h1>`
 
         /**
          * Element.innerHTML;
@@ -70,6 +90,8 @@
          * @returns { object }
          */
 
+        subTitleElement.innerHTML = '<em>Ali Babo</em>';
+
 
         /**
          * Element.classList;
@@ -78,22 +100,32 @@
          */
 
         // Eine liste aller klassen, die das element besitzt:
-
+        console.log(allListItems[0].classList);
 
         // Unser element: <li class="item"></li>
 
         // Wir fügen eine klasse hinzu:
-
+        allListItems[0].classList.add("active")
+        console.log(allListItems[0].classList);
 
         // Wir löschen eine klasse aus der liste
-
-
+        allListItems[0].classList.remove("item")
+        console.log(allListItems[0].classList);
         /**
          * Element.id
          * @description mit Element.id; können wir die id eines elementes ausgeben oder ändern
          * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/id
          */
+
+        containerElement.id = "page";
+        console.log(containerElement.id);
+
+        // löschen
+        containerElement.removeAttribute('id')
+        console.log(containerElement);
     </script>
+
+
 
 </body>
 

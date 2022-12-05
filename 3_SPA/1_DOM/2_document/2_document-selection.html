@@ -36,6 +36,10 @@
          * returns { object }
          */
 
+        const titleElement = document.getElementById('title');
+        console.log(titleElement.innerText);
+
+
 
         /**
          * document.getElementsByClassName();
@@ -44,6 +48,14 @@
          * @param { string } className - name der klasse
          * @returns { array }
          */
+
+        const loremElements = document.getElementsByClassName('lorem');
+        console.log(loremElements.length);
+
+        console.log(loremElements[0].innerText);
+
+        loremElements[0].innerText = "Hosam ist iwas"
+        loremElements[1].innerHTML = '<h1 class="test"> Hallo Welt </h1>'
 
 
         /**
@@ -54,6 +66,11 @@
          * @returns { object }
          */
 
+        const subtitleElement = document.querySelector("#subtitle");
+        console.log(subtitleElement.innerHTML);
+        const loremElement = document.querySelector(".lorem");
+        console.log(loremElement.innerHTML);
+
 
         /**
          * document.querySelectorAll();
@@ -62,6 +79,9 @@
          * @param { string } selector - der gesuchte selector kann aus elementtypen, klassen oder id's bestehen.
          * @returns { array }
          */
+
+        const allListItems = document.querySelectorAll('.item');
+        console.log(allListItems);
     </script>
 
 </body>

@@ -15,11 +15,17 @@
          * document;
          * Das document objekt gibt den inhalt des html dokumentes zurück.
          */
+        console.log("document", document);
 
         // Der <head> des HTML dokumentes
+        console.log("head: ", document.head);
 
 
         // Der titel der aktuellen html datei
+        console.log('title: ', document.title);
+
+        document.title = "Dies ist ein neuer Titel"
+        console.log('title: ', document.title);
     </script>
 
 </body>
