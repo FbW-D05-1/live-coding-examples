@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .active {
+            color: tomato;
+        }
+
+        #page {
+            background: cyan;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 id="title">Seitentitel</h2>
+
+        <h3 id="subtitle">Untertitel <span>Test</span></h3>
+
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, quaerat!
+        </p>
+
+        <p class="lorem">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore debitis non voluptatibus commodi a
+            tempora adipisci inventore natus magni.
+        </p>
+
+        <ul id="list">
+            <li class="item">1. Eintrag</li>
+            <li class="item">2. Eintrag</li>
+            <li class="item">3. Eintrag</li>
+        </ul>
+    </div>
+
+    <script>
+        /**
+         * Element.style;
+         * @description Das style objekt bietet uns die möglichkeit den CSS-Style von elementen auszugeben, oder abzuändern
+         * WICHTIG: in JavaScript schreiben wir css-regeln, die wir mit bindestrichen kennen (zb. text-align) in camelCase (textAlign).
+         * @returns { object }
+         */
+
+        // styles werden in JS anders geschrieben:
+        // zum beispiel: border-radius wird zu borderRadius
+
+
+
+        /**
+         * Element.innerText;
+         * @description Mit der property Element.innerText; können wir den text innerhalb eines HTML elementes zurückgeben oder ändern.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+         * @returns { string }
+         */
+
+
+        /**
+         * Element.innerHTML;
+         * @description Mit der property Element.innerHTML; können wir den html-inhalt eines elements zurückgeben oder ändern.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+         * @params { stgring } text
+         * @returns { object }
+         */
+
+
+        /**
+         * Element.classList;
+         * @description Mit Element.classList; können wir uns alle klassen eines elementes ausgeben lassen, weitere klassen hinzufügen, oder entfernen.
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+         */
+
+        // Eine liste aller klassen, die das element besitzt:
+
+
+        // Unser element: <li class="item"></li>
+
+        // Wir fügen eine klasse hinzu:
+
+
+        // Wir löschen eine klasse aus der liste
+
+
+        /**
+         * Element.id
+         * @description mit Element.id; können wir die id eines elementes ausgeben oder ändern
+         * @see https://developer.mozilla.org/en-US/docs/Web/API/Element/id
+         */
+    </script>
+
+</body>
+
+</html>

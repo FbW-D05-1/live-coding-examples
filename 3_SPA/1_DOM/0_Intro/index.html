@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWebstite</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web -->
+
+<!--Onload means when the body of our web site gets loaded up, then whatever Js we place inside the quotation marks will get carried out. Has to be in single quotation mark or else error-->
+
+<!--Inline Js has a lot of downsides, it's not modular, difficult to debug and it's also not a good practice and will clog up your html real quick-->
+
+<body onload="alert('Hello')">
+
+    <h1>Hello</h1>
+    <!--JavaScript works similar like css you can either write your code here which you shouldn't do in the future or best way to link an .js file with your html-->
+
+
+    <!--Internal Js better than Inline still you should avoid in the future-->
+    <script type="text/javascript">
+        alert("Bye bye")
+        // will run before the body onload
+    </script>
+    <!--And finally the best method external source-->
+    <script src="index.js" charset="utf-8"></script>
+    <!--why should js be always below your html? if it's not it can't find the divs, h1's etc  cause they render after js runs-->
+</body>
+
+</html>
