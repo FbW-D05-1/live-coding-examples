@@ -18,6 +18,7 @@
 
     <!-- Hier befindet sich unser "before" element (davor)-->
 
+    <!-- <p>Kommt vor unserem beispielElement</p> -->
     <p id="beispiel">Hallo Welt!</p>
 
     <!-- Hier befindet sich unser "after" element (danach) -->
@@ -25,13 +26,19 @@
     <footer>Hier ist ein footer!</footer>
 
     <script>
+        const paraElement = document.getElementById('beispiel');
+        const footerElement = document.querySelector('footer');
+
         /**
          * ChildNode.before();
          * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/before
          * Diese methode fügt ein element über dem aktuellen element ein.
          * @param { object } - das einzufügende Element.
          */
+        const beforeElement = document.createElement('p');
 
+        beforeElement.innerText = 'Kommt vor unserem Selektiertem Element';
+        paraElement.before(beforeElement)
 
         /**
          * ChildNode.after();
@@ -40,6 +47,12 @@
          * @param { object } - das einzufügende element
          */
 
+        const afterElement = document.createElement('p');
+
+        afterElement.innerText = 'Kommt nach unserem Selektiertem Element';
+
+        footerElement.after(afterElement);
+
 
         /**
          * ChildNode.replaceWith();
@@ -47,9 +60,13 @@
          * Diese methode ersetzt das selektierte element mit einem anderen.
          * param { object } - das einzufügende element
          */
-
+        const newElement = document.createElement('h1');
+        newElement.id = 'beispiel';
+        newElement.innerText = 'Ersetzt unser aktuelles element';
 
         // Wir ersetzen das selektierte element mit dem neuen element.
+
+        paraElement.replaceWith(newElement);
 
 
         /**
@@ -57,6 +74,8 @@
          * @see https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
          * Diese methode löscht das selektierte element
          */
+
+        footerElement.remove();
     </script>
 
 </body>
