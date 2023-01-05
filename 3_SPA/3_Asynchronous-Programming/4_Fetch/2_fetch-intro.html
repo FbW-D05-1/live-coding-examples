@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fetch</h1>
+
+    <a href="https://developer.mozilla.org/de/docs/Web/API/Fetch_API">MDN link</a>
+
+    <h2>Was ist fetch?</h2>
+
+    <p>
+        fetch(); ist eine moderne art resourcen von anderen quellen zu laden, dafür führt es einen XMLHttpRequest,
+        kurz XHR, mithilfe von Promises aus, und erzeugt so keine callback-hell.
+        <br>
+        Dieser xhr-request sendet eine anfrage zu einem server und liefert, die angefragten daten, die sogenannte
+        response. zurück.
+    </p>
+
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/todos/1";
+        fetch(url).then(response => {
+            console.log(response);
+            return response.json();
+        }).then(data => console.log(data.title)).catch(error => console.log(error, error.message))
+
+        const fetchrequest = async () => {}
+
+        async function lina() {
+            try {
+                const response = await fetch(url);
+                console.log("async", response);
+                const data = await response.json();
+
+                console.log("async", data.title)
+            } catch (error) {
+                console.log(error, error.message)
+            }
+        }
+        lina()
+    </script>
+
+</body>
+
+</html>

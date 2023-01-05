@@ -79,32 +79,50 @@
 
     <script>
         // Wir erstellen eine funktion, die eine zeit wartet und dann ein callback ausführt:
+
         function warteEtwas(time) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve("Alles Gut");
-                    reject("Etwas schief gelaufen");
-                }, time)
-            })
+                    resolve("Hallo Welt!");
+                    reject("fehler...");
+                }, time);
+            });
         }
 
-
         // Wir führen die funktion aus und übergeben die wartezeit, dann nutzen wir ".then()":
-
+        warteEtwas(10000).then(
+            (result) => // Wir übergeben die daten des resolved state
+            {
+                console.log(result);
+            },
+            (error) => // Wir übergeben die daten des reject state
+            {
+                console.log(error);
+            }
+        )
 
         // then: funktion.then(erfolgreicher callback, nicht erfolgreicher callback);
 
         // Es wird empfohlen, jede promise chain mit .catch(); zu beenden, damit werden fehler aufgefangen und das programm kann weiter laufen.
-        warteEtwas(3000).then(
-            (result) => {
-                console.log(result);
-            },
-            (error) => {
-                console.log(error)
-            }
-        )
+        warteEtwas(3000).then(result => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        });
 
         // Um eine reihe von promises zu erfüllen, gibr es .all();, diese methode wartet bis entweder alle promises gelöst wurden, oder eine abgelehnt wurde. mit resolve(); können wir auch selbst eein ergebnis erzwingen und etwas returnen.
+
+        const promise1 = Promise.resolve("test");
+        const promise2 = Promise.resolve(false);
+        const promise3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Auf mich sollte man warten!");
+            }, 6000);
+        });
+
+        Promise.all(["hallo", promise2, promise3]).then(values => {
+            console.log(values);
+        }).catch(error => console.log(error));
     </script>
 
 </body>

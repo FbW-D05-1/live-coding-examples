@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Async</h1>
+
+    <h2>Fetch</h2>
+
+    <h3>Posts</h3>
+
+    <ul id="posts"></ul>
+
+    <script>
+        const postsElement = document.getElementById('posts');
+        const url = "https://jsonplaceholder.typicode.com/posts";
+
+        fetch(url).then((response) => {
+            console.log(response)
+            return response.json()
+        }).then((JSONData) => {
+            console.log(JSONData)
+
+            JSONData.map(post => {
+                const newListItem = document.createElement("LI");
+                const newTitleItem = document.createElement("H3");
+                const newParagraphItem = document.createElement("P");
+
+                newTitleItem.innerText = post.title;
+                newParagraphItem.innerText = post.body;
+
+                newListItem.append(newTitleItem, newParagraphItem);
+                postsElement.append(newListItem);
+            })
+        }).catch(error => {
+            console.log(error, error.message);
+        })
+
+
+
+        const fetchrequest = async () => {
+            try {
+                const res = await fetch(url);
+                const JSONData = await res.json();
+                JSONData.map(post => {
+                    const newListItem = document.createElement("LI");
+                    const newTitleItem = document.createElement("H3");
+                    const newParagraphItem = document.createElement("P");
+
+                    newTitleItem.innerText = post.title;
+                    newParagraphItem.innerText = post.body;
+
+                    newListItem.append(newTitleItem, newParagraphItem);
+                    postsElement.append(newListItem);
+                })
+            } catch (e) {
+                console.log(e, e.message)
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

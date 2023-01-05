@@ -124,7 +124,32 @@
     </div>
 
     <script>
+        // Wir holen uns die benötigten elemente
+        const spinnerElement = document.querySelector('.loadingio-spinner');
+        const pageElement = document.getElementById("page");
 
+        // wir setzen das page-element auf display: none, um es zu verstecken
+        pageElement.style.display = "none";
+
+        // Wir schreiben eine funktion, die nach einer zeit ein callback ausführt
+        function waitForPage(time) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(true);
+                }, time);
+            });
+        }
+
+        waitForPage(3000).then(
+            (state) => // wir übergeben die daten des resolved state 
+            {
+                if (state) {
+                    // wenn der state "true" ist, füllen wir die daten ein und zeigen die seite an
+                    spinnerElement.style.display = "none";
+                    pageElement.style.display = "block";
+                }
+            }
+        )
     </script>
 
 </body>
