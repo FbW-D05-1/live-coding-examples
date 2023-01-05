@@ -52,6 +52,8 @@
             return response.json()
         }).then(data => {
             console.log(data);
+            const parsedData = JSON.parse(data.data);
+            console.log(parsedData.firstName)
             console.log(data.json.firstName)
             console.log(data.json.lastName)
             console.log(data.json.age)
