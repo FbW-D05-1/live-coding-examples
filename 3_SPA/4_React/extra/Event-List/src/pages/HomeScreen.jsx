@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 
+import { Title, Modal } from "./components/index";
+
 function App() {
-  // const [count, setCount] = useState(0);
+  const [showModal, setShowModal] = useState(true);
 
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([
@@ -20,6 +22,16 @@ function App() {
       })
     );
   };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+
+  const handleModalOpen = () => {
+    setShowModal(true);
+  };
+
+  const subtitle = "All the latest events as a Prop";
 
   return (
     <div className="App">
@@ -40,6 +52,7 @@ function App() {
           Decrese Count
         </button>
       </div> */}
+      <Title title="All the events in your Area" subtitle={subtitle} />
 
       {showEvents &&
         events.map((event, index) => (
@@ -50,7 +63,6 @@ function App() {
             <button onClick={() => handleClick(event.id)}> Delete</button>
           </div>
         ))}
-
       {!showEvents && (
         <div>
           <button
@@ -73,6 +85,39 @@ function App() {
           </button>
         </div>
       )}
+      {/* <Modal>
+        <h1>10% off coupon code!!!</h1>
+        <div>use code nice </div>
+        <input type="text" />
+        <button>Click me</button>
+      </Modal> */}
+
+      {/* <Modal>
+        <Title title="hi" subtitle="bye" />
+        <form>
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <button>Submit</button>
+        </form>
+      </Modal> */}
+
+      {showModal ? (
+        <Modal handleClose={handleModalClose}>
+          <h2>Terms and Conditions</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, et
+            assumenda sint impedit laudantium ullam explicabo dolorum eaque vel
+            ex ut aut, eos quidem aspernatur molestiae accusantium quae maxime.
+            Aspernatur?
+          </p>
+        </Modal>
+      ) : (
+        <h1>Error</h1>
+      )}
+
+      <button onClick={handleModalOpen}>Show me Da Modal plox</button>
     </div>
   );
 }
