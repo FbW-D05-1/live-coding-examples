@@ -1,5 +1,6 @@
 import { useState, useId } from "react";
 import "./App.css";
+import EventForm from "./components/EventForm/EventForm";
 
 import { EventList, Title, Modal } from "./components/index";
 
@@ -8,9 +9,14 @@ function App() {
 
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([]);
-  const handleClick = (id) => {
-    console.log(id);
 
+  const addEvent = (event) => {
+    setEvents((prevEvents) => {
+      return [...prevEvents, event];
+    });
+  };
+
+  const handleClick = (id) => {
     setEvents((prevEvents) =>
       prevEvents.filter((event) => {
         return id !== event.id;
@@ -27,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <Title title="Welcum" subtitle={subtitle} />
+      {showEvents && <EventList events={events} handleDelete={handleClick} />}
       {showEvents && (
         <button onClick={() => setShowEvents(false)}>hide events</button>
       )}
@@ -35,7 +42,9 @@ function App() {
       )}
 
       {showModal && (
-        <Modal handleClose={handleClose} isSalesModal={true}></Modal>
+        <Modal handleClose={handleClose} isSalesModal={true}>
+          <EventForm addEvent={addEvent} handleClose={handleClose} />
+        </Modal>
       )}
       <div>
         <button onClick={() => setShowModal(true)}>Add New Event</button>
