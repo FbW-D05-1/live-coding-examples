@@ -19,3 +19,21 @@ This is our component that's ultimately injected into the DOM by React Dom and t
 Then inside the app component, we could nest two more components Navbar component and an EventList components that maybe inside those components We could also nest all the other components inside like: Navbar, nest Logo component for the site logo and maybe a menu component for outputting enough bar links
 
 And most importantly each one of these components would have it's own file, it's own component function and it's own template
+
+
+examples: 
+
+How to import a component
+```jsx
+    import Example from './components/Example'
+```
+
+How to use the imported component
+```jsx
+<Example />
+```
+
+or
+```jsx
+<Example></Example>
+```
