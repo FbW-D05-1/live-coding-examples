@@ -80,3 +80,37 @@ export default function Example({foo, handleClick, setBoolean}) {
   );
 }
 ```
+
+## Children as a prop
+So now if we wan't our components contents(html) be dynamic we need pass down props as chidlren
+We will keep using Example
+
+basically our Component itself must contain only the things that are necassary everything else we want to pass down
+for example:
+
+```jsx
+// obviously we can use destructure aswell children will always be called children => {children}
+export default function ReusableExample(props) {
+  return (
+    <form className="form-backdrop">
+      <div className="form-content">{props.children}</div>
+    </form>
+  );
+}
+```
+
+Now where ever we need this form
+The children can be anything you want and now it's basically recyclable
+```jsx
+    <ReusableExample>
+        <label>
+            <span>Type Something</span>
+            <input type text/>
+        </label>
+        <label>
+            <span>Type Something Else</span>
+            <input type text/>
+        </label>
+        <button>Submit</button>
+    </ReusableExample>
+```
