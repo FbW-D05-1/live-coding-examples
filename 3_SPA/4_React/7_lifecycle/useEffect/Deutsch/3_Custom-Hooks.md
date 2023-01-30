@@ -172,7 +172,7 @@ Als n채chstes m체ssen wir die trips.map-Variable in data.map 채ndern oder wir k�
 const {data: trips} = useFetch(url);
 ```
 
-Jetzt funktioniert es nicht, da der Wert unserer Daten f체r die ersten ms beim Abrufen Null ist, um dies zu verhindern, setzen wir entweder unseren State in useFetch auf Array.
+Jetzt funktioniert es nicht, da der Wert unserer data f체r die ersten ms(mili seconds) beim Abrufen Null ist, um dies zu verhindern, setzen wir entweder unseren State in useFetch auf Array.
 
 ```jsx
                       //ge채ndert in [] von null
@@ -188,7 +188,7 @@ oder besser, bevor wir map aufrufen, setzen wir trips && trips.map.
 
 ```
 
-oder 
+oder am besten
 
 ```jsx
 trips?.map((trip) => (
