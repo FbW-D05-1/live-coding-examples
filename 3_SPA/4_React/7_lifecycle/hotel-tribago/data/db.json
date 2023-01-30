@@ -1,0 +1,46 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "title": "2 Night Stay in Sheraton",
+      "price": "$180",
+      "loc": "europe"
+    },
+    {
+      "id": 2,
+      "title": "3 Night Stay in Hitlon",
+      "price": "$290",
+      "loc": "europe"
+    },
+    {
+      "id": 3,
+      "title": "5 Night Stay in Bangkok",
+      "price": "$3",
+      "loc": "europe"
+    },
+    {
+      "id": 4,
+      "title": "3 Night Stay in some Serbian hotel",
+      "price": "$325",
+      "loc": "america"
+    },
+    {
+      "id": 5,
+      "title": "69 Night Stay in Hosam's Bedroom",
+      "price": "$69",
+      "loc": "america"
+    },
+    {
+      "id": 6,
+      "title": "1 Night Stand in Hosam's Bedroom",
+      "price": "$10000",
+      "loc": "america"
+    },
+    {
+      "id": 7,
+      "title": "2 Night Stay in Sheraton",
+      "price": "$888",
+      "loc": "europe"
+    }
+  ]
+}
