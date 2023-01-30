@@ -1,6 +1,5 @@
 {
-  "trips": [
-    {
+  "trips": [{
       "id": 1,
       "title": "2 Night Stay in Sheraton",
       "price": "$180",
