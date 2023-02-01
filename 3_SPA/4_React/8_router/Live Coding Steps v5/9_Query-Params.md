@@ -75,4 +75,4 @@ Awesome. Now, if we change to a different value it will change aswell
 
 So that, my friends, is the React router, in a nutshell. You are going to be using it a hell of a lot going forward on in all of the different projects, be it personal or work. It is that important.
 
-We will takle Router 6 next now gn8
+We will takle Router V6 tomorrow, gn8
