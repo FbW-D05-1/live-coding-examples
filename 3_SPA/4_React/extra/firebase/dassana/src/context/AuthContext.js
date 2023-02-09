@@ -28,13 +28,12 @@ export const AuthContextProvider = ({ children }) => {
   });
   useEffect(() => {
     //onAuthStateChanged must be in useEffect and will be triggerd when the user is logged in
-    /** A clean up function that the useEffect will not stack up every time */
+    /** A clean up function that the useEffect will not stack up every time and will give the user Object back*/
     const unsub = projectAuth.onAuthStateChanged((user) => {
       dispatch({ type: "AUTH_IS_READY", payload: user });
       unsub();
     });
   }, []);
-  console.log("AuthContext state:", state);
   return (
     // Provider for the context so we can have a global contaxt provider
     <AuthContext.Provider value={{ ...state, dispatch }}>

@@ -1,4 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
+
+//pages
 import Dashboard from "./pages/dashboard/Dashboard";
 import Create from "./pages/create/Create";
 import Login from "./pages/login/Login";
@@ -10,21 +13,42 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 //Welcome to my broken comments on this Project
 function App() {
+  const { user, authIsReady } = useAuthContext();
   return (
     <div className="App">
-      <BrowserRouter>
-        <Sidebar />
-        <div className="container">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/projects/:id" element={<Project />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      {authIsReady && (
+        <BrowserRouter>
+          {/**if the user is not logged in will not see the Side Navbar */}
+          {user && <Sidebar />}
+          <div className="container">
+            <Navbar />
+            <Routes>
+              {/**A check if the user is logged in and in the data base , if the user is not logged in will be redirected to the signup page */}
+              <Route
+                path="/"
+                element={user ? <Dashboard /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/create"
+                element={user ? <Create /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/login"
+                element={!user ? <Login /> : <Navigate to="/" />}
+              />
+              <Route
+                path="/signup"
+                element={!user ? <Signup /> : <Navigate to="/" />}
+              />
+
+              <Route
+                path="/projects/:id"
+                element={user ? <Project /> : <Navigate to="/login" />}
+              />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      )}
     </div>
   );
 }
