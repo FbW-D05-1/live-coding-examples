@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
 import "./App.css";
+import OnlineUsers from "./components/OnlineUsers";
 //Welcome to my broken comments on this Project
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -47,6 +48,7 @@ function App() {
               />
             </Routes>
           </div>
+          {user && <OnlineUsers />}
         </BrowserRouter>
       )}
     </div>

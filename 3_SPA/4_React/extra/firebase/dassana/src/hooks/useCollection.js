@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { projectFirestore } from "../firebase/config";
-
+/** Real time dynamic fetch with sort(where) and ordering args: (collection string, query array, orderBy array) */
 export const useCollection = (collection, _query, _orderBy) => {
   const [documents, setDocuments] = useState(null);
   const [error, setError] = useState(null);
@@ -17,7 +17,7 @@ export const useCollection = (collection, _query, _orderBy) => {
       //...quary = ["user.id", "==", "project.assignedTo.id"] when we use it in where() method
       ref = ref.where(...query);
     }
-    // ...orderBy = ["decending", "byTimestamp"]
+    // ...orderBy = ["byTimestamp","decending"]
     if (orderBy) {
       ref = ref.orderBy(...orderBy);
     }
@@ -27,7 +27,7 @@ export const useCollection = (collection, _query, _orderBy) => {
     const unsub = ref.onSnapshot(
       (snapshot) => {
         let results = [];
-        //Doc is the user Object
+        //Doc is the user Object in the db
         snapshot.docs.forEach((doc) => {
           results.push({ ...doc.data(), id: doc.id });
         });

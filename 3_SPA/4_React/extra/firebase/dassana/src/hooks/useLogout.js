@@ -10,7 +10,7 @@ export const useLogout = () => {
   const { dispatch } = useAuthContext();
 
   // log out request
-
+  /** A Function to check if the user Loggedin and saved in the db or not */
   const logout = async () => {
     setError(null);
     setIsPending(true);
@@ -23,7 +23,7 @@ export const useLogout = () => {
         online: false,
       });
 
-      //Signs out the current user. alos form firebase, if logged out the user at the start, we will not get the user uid
+      //Signs out the current user form firebase, if logged out the user at the start, we will not get the user uid
       await projectAuth.signOut();
       //assign the dispatch for the useAuthContext
       dispatch({ type: "LOGOUT" });
