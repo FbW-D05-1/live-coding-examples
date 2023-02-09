@@ -1,0 +1,36 @@
+main{
+    min-height: 80vh;
+}
+
+h3{
+    padding: 1rem;
+}
+
+.rating span{
+    margin: 0.1rem;
+}
+
+#centeredUpload{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+
+#mainUpload{
+    position: absolute;
+    width: 100%;
+    margin-top: 18% !important;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+
+.uploadBtn{
+    color:#001f3f;
+}
+
+.sc-bdvvtL{
+    margin: 20px;
+}
