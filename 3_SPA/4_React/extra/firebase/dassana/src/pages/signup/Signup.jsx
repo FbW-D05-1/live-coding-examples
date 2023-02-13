@@ -40,7 +40,7 @@ export default function Signup() {
       return;
     }
     /** To check to file size */
-    if (selected.size > 100000) {
+    if (selected.size > 900000) {
       setThumbnailError("Image file must be less than 100kb");
       return;
     }
