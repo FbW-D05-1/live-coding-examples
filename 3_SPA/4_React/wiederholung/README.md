@@ -62,7 +62,7 @@ antwort: true
 
 * Mounting => componentWillMount => First Render
 
-* Updating => componentWillUpdate => Veränderung von Komponent
+* Updating => componentDidUpdate => Veränderung von Komponent
 
 * Unmounting => componentWillUnmount => Entfernt von Virtuellen DOM
 
