@@ -1,0 +1,5 @@
+# Calculator
+
+We're going to be using what we learned so far about setting up a new web site with a server using Node and Express to create a really simple web site that acts as a calculator, so I can simply enter maybe two numbers, 5 and 6, and I hit calculate, and I get the result back. Now, in the process of building this, we're going to get to create our very first web application, and it's not just a web site anymore. Just like React it will be a web application. We're going to be making our code run server side. So when our web site makes a request to our server, it's going to execute the code and only deliver the outcome back to the user, so the user doesn't get to see any of the code and logic of our calculator. It's all done on our server.
+
+And once we grasp this concept, then we'll be able to make much faster, more complex web sites that can do computation before it even renders the web site to be delivered to the user, and we'll be able to interact with databases, and query, and search, and manipulate our databases, and create much more interesting web applications. So this is the core concept that we're going to tackle.
