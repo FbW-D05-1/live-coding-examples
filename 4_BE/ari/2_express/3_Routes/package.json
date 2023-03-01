@@ -1,0 +1,15 @@
+{
+  "name": "3_routes",
+  "version": "1.0.0",
+  "description": "So this first parameter(\"/\") specifies the route that we are going to respond to. So that means when we get a get request from a browser that is targeting this route, which is the home route, then we're going to respond with our callback.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

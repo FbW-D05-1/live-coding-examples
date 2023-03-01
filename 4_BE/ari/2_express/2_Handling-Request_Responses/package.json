@@ -1,0 +1,16 @@
+{
+  "name": "2_handling-request_responses",
+  "version": "1.0.0",
+  "description": "We can't display you anything because server isn't giving us anything to display. So that's what we're going to address now.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

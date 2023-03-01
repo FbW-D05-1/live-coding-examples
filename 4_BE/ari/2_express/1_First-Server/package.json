@@ -1,0 +1,16 @@
+{
+  "name": "1_first-server",
+  "version": "1.0.0",
+  "description": "let's create a new file and call it server.js\r and then let's open our terminal and now initialize with npm:\r ```bash\r npm init\r ```",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ari",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
