@@ -94,7 +94,11 @@ Jetzt sind Sie an der Reihe, ein neues Dokument mit der Mongo-Shell zu erstellen
 Die Lösung:
 
 ```
-
+db.products.insertMany(
+    {_id:2, name: "Bleistift", preis: 0.80},
+    {_id:2, name: "Bleistift", preis: 0.80},
+    {_id:2, name: "Bleistift", preis: 0.80}
+    )
 
 
 
