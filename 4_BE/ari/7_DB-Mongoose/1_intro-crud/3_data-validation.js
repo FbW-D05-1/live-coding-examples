@@ -39,13 +39,6 @@ const findFruitsByName = async () => {
 
 // findFruitsByName();
 
-const personSchema = new mongoose.Schema({
-  name: String,
-  alter: Number,
-});
-
-const Person = new mongoose.model("Person", personSchema);
-
 const fruit = new Fruit({
   name: "deez",
   score: 0,
