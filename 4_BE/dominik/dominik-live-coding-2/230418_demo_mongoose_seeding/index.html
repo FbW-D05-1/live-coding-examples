@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+
+<body>
+    <form>
+        <label>
+            Title
+            <input type="text" name="title">
+        </label>
+
+        <label>
+            Image
+            <input type="file" name="image">
+        </label>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.querySelector("form");
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const title = form.elements.title.value;
+            const image = form.elements.image.files[0];
+
+            // Um unsere gemischten Formulardaten (Text und Datei) an das Backend zu senden,
+            // verwenden wir FormData, damit der Body alles aufnehmen kann.
+            const formdata = new FormData();
+            // Wir fügen jedes Attribut mit .append() hinzu.
+            formdata.append("title", title);
+            formdata.append("image", image);
+
+            // Wir können alternativ auch die Werte automatisch auslesen lassen.
+            // Dazu geben wir nur das Formular an den Konstruktor weiter.
+            // Vorteil: Unabhängig von der Formularlänge benötigen wir nur diese eine Zeile.
+            // Nachteil: Wir haben keine weitere Kontrolle darüber, was im Request gesendet wird,
+            // da das gesamte Formular übermittelt wird.
+            // const formdata2 = new FormData(form);
+
+            // Anschließend senden wir nur noch unser formdata im Body mit.
+            await fetch("http://localhost:4000/images", {
+                method: "POST",
+                body: formdata,
+            });
+        };
+
+    </script>
+</body>
+
+
+</html>
