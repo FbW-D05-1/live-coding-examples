@@ -1,4 +1,5 @@
-# docker vs Virtual Machine
+# Docker
+## Docker vs Virtual Machine
 
 vm is full os and needs licenses etc
 vm is very slow to start
@@ -12,7 +13,7 @@ needs less hardware resources
 
 
 
-# Docker architecture 
+## Docker architecture 
 
 Client talks to Server via Rest API
 instead of using full os uses kernel of the host (kernel manages applications and hardware resources)
@@ -23,7 +24,7 @@ Mac has Linux VM
 
 
 
-# getting started with docker
+## getting started with docker
 
 add dockerfile to existing application
 
@@ -39,7 +40,7 @@ dev uploads the image to registry like docker hub(storage) after that it will wo
 
 
 
-# DOCKER TUT
+## DOCKER TUT
 mkdir folder-name
 cd folder-name
 create a file named Dockerfile (capital D) inside of it 
@@ -51,24 +52,24 @@ CMD node /app/app.js
 (alternative to above: WORKDIR /app)
 
 
-# Building docker image
+## Building docker image
 
    -t: tag    . where docker can find the dockerfile
 
 docker build -t hello-docker .
 
 
-## To find docker images
+### To find docker images
 docker image
 or
 docker image ls < list
 
 
-## TO RUN THE IMAGE
+### TO RUN THE IMAGE
 docker run hello-docker
 
 
-# PUSHING TO DOCKERHUB
+## PUSHING TO DOCKERHUB
 
 docker login -u username
 
@@ -77,7 +78,7 @@ tag nameoftheimage:latest username/dockerhub:nameoftheimagepush
 docker push username/dockerhub:nameoftheimagepush
 
 
-# PULLING DOCKER (TESTED ON UBUNTU)
+## PULLING DOCKER (TESTED ON UBUNTU)
 
 docker pull username/nameoftheimage
 
@@ -87,4 +88,4 @@ docker run imagenamehere
 
 
 
-### more info [here](https://github.com/AriiMe/docker-development-youtube-series/tree/master/nodejs)
+#### more info [here](https://github.com/AriiMe/docker-development-youtube-series/tree/master/nodejs)

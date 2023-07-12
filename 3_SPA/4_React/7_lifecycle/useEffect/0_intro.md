@@ -77,10 +77,10 @@ Now if we use Vite our enviromentals have to start with => VITE_
 Example:
 * VITE_API_BASE_URL=http://localhost:3000
 
-If we use CRA our enviromentals have to start with => REACT_ 
+If we use CRA our enviromentals have to start with => REACT_APP 
 
 Example:
-* REACT_API_BASE_URL=http://localhost:3000
+* REACT_APP_API_BASE_URL=http://localhost:3000
 
 ### How to use env's in our code
 Our env's will be globally available across every file so you can store it in a new variable or just use it with special command for example:
@@ -93,11 +93,11 @@ VITE
 2. or directly in **await fetch(import.meta.env.VITE_API_BASE_URL)**
 
 CRA
-1. const url = process.env.REACT_API_BASE_URL;
+1. const url = process.env.REACT_APP_API_BASE_URL;
 
 * like this we can use url our localhost:3000
 
-2. or directly in **await fetch(process.env.REACT_BASE_URL)**
+2. or directly in **await fetch(process.env.REACT_APP_API_BASE_URL)**
 
 **WARNING: If you use npm run build all of your keys will be converted and publicly available so if you really wan't to build your app to vanilla html and js please beware**
 

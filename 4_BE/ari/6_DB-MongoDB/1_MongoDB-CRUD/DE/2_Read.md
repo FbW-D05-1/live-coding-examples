@@ -66,4 +66,10 @@ Wenn Sie nun find verwenden, wird standardmäßig immer id angezeigt. Aber Sie k
 db.products.find({_id: 1}, {_id: 0, name: 1})
 ```
 
+um alle in eine Collection zu filtrieren:
+
+```
+db.products.find({}, {_id: 0, name: 1})
+```
+
 und dies wird Ihnen nur den Namen liefern. Mit dem zweiten Parameter in der Suchmethode können wir angeben, welche Felder in den Daten wir zurückhaben wollen. Und in ```{_id: 1}, {_id: 0, name: 1}``` wollen wir nur den Namen und sonst nichts. Im Fall von ```{Name: 1, Preis: 0}``` wollen wir sowohl den Namen als auch die ID, die standardmäßig enthalten ist, und wenn wir keines davon angeben, erhalten wir alle Felder in diesem Datensatz.

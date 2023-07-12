@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Deklaration des Dokumententyps - hilft dem Browser bei der korrekten Darstellung der Seite -->
+<html lang="de">
+<!-- Das HTML-Element <html> repräsentiert das Wurzelelement (oberstes Element) eines HTML-Dokuments und wird daher auch als Wurzelelement bezeichnet. Alle anderen Elemente müssen Nachfahren dieses Elements sein. -->
+​
+
+<head>
+    <!-- Das <head>-Element enthält maschinenlesbare Informationen (Metadaten) über das Dokument, wie z.B. den Titel, Skripte und Stylesheets. -->
+    <!-- Viele <meta>-Elemente enthalten die Attribute "name" und "content":
+    name gibt an, um welche Art von Meta-Element es sich handelt und welche Art von Informationen es enthält.
+    content gibt den eigentlichen Meta-Inhalt an. -->
+    <meta charset="UTF-8" />
+    <!-- Unicode (oder Universal Coded Character Set) Transformation Format – 8-Bit. -->
+    <!-- Das <meta>-Element befindet sich im <head> und enthält Informationen über die Webseite. -->
+    <!-- Damit ein HTML-Dokument korrekt angezeigt werden kann, muss der Webbrowser wissen, welcher Zeichensatz verwendet werden soll. -->
+    <!-- UTF-8 (Unicode) deckt fast alle Zeichen und Symbole der Welt ab. -->
+    <!-- symbols-and-special-characters zur Unterscheidung zwischen Symbolen und Zeichen -->
+    ​
+    <!-- Kompatibilität für ältere Browser -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    ​
+    <!-- Ansichtsfenster des Geräts und initiale Skalierung von 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ​
+    <!-- Autor und Inhaltstyp -->
+    <meta name="author" content="John" />
+    ​
+    <!-- Name und Beschreibung der Webseite. Wird in Suchmaschinen angezeigt. -->
+    <meta name="description"
+        content="ta sapiente porro. Hic suscipit minima quia sapiente autem laborum ratione quae eius corporis nemo laudantium dicta numquam ea dolore perspiciatis, corrupti aspernatur id, nesciunt nulla, asperiores ex nihil. Adipisci provident sint illo eum nihil dolore, molestiae molestias ipsa fugit, non natus, iste quod ratione eius accusamus iusto necessitatibus similique! Voluptatibu" />
+    ​
+    <!-- Schlüsselwörter/Tags für SEO (Suchmaschinenoptimierung) -->
+    <meta name="keywords" content="lernen, Bücher, Bildung" />
+    ​
+    <!-- Verknüpfung der CSS-Datei mit dem HTML -->
+    <link rel="stylesheet" href="styles.css" />
+    ​
+    <!-- Inline-CSS innerhalb des HTML-Dokuments -->
+    <style>
+        h2 {
+            color: red;
+        }
+
+        body {
+            background-color: brown;
+        }
+    </style>
+    ​
+    <!-- Titel der Webseite, der im Tab angezeigt wird -->
+    <title>Zufällig</title>
+</head>
+​
+<!-- Das <body>-Element repräsentiert den Inhalt eines HTML-Dokuments. Es darf nur ein <body>-Element in einem Dokument geben. -->
+
+<body>
+    <!-- Div ist eine leere Box -->
+    <div>
+        <!-- Überschriften von h1 bis h6 und deren Größe (1 ist am größten, 6 ist am kleinsten) -->
+        <h1 style="color: blue">Dies ist ein Titel</h1>
+        ​
+        <h2>
+            <strong>Fetter Titel</strong>
+        </h2>
+        ​
+        <!-- p steht für Absatz, das title-Attribut erstellt einen Hilfetext für den gesamten Absatz -->
+        <p title="Dies ist ein Absatz">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla,
+            similique.
+        </p>
+        ​
+        <p>
+            <!-- abbr erstellt einen kleinen Hilfetext für einen spezifischen Inhalt -->
+            <abbr title="Weltgesundheitsorganisation">WHO</abbr> dolor sit amet consectetur, adipisicing elit.
+            Temporibus eum ea praesentium consectetur sunt voluptates, perferendis magni numquam aliquid esse expedita
+            illo soluta sapiente porro. Hic suscipit minima quia sapiente autem laborum ratione quae eius corporis nemo
+            laudantium dicta numquam ea dolore perspiciatis, corrupti aspernatur id, nesciunt nulla, asperiores ex
+            nihil. Adipisci provident sint illo eum nihil dolore, molestiae molestias ipsa fugit, non natus, iste quod
+            ratione eius accusamus iusto necessitatibus similique! Voluptatibus at, beatae mollitia, fuga itaque amet,
+            vel provident laboriosam tempore ipsa quaerat maiores hic dolores porro facilis dolore ea natus fugit harum
+            inventore? Impedit, totam! Veritatis, beatae?
+        </p>
+        <!-- a steht für Anchor und verlinkt entweder zu einer anderen Webseite oder zu einem anderen HTML-Dokument -->
+        <a href="https://www.google.com" target="_blank">Klick mich</a>
+        ​
+        <!-- Zeilenumbruch. Element nach br wird in die nächste Zeile geschrieben -->
+        <br />
+        ​
+        <!--img erstellt ein Bild, src (Quelle) gibt den Speicherort der Datei (URL oder Datei/Ort/Name) an und alt ist ein alternativer Text, der das Bild beschreibt -->
+        <img src="" alt="Schuhe" />
+    </div>
+    ​
+    <!-- Eingabefeld -->
+    <input type="text" class="form-control" placeholder="Geben Sie Ihre E-Mail-Adresse ein" />
+    ​
+    <!-- Span ist ähnlich wie div, eine weitere leere Box für Inhalt -->
+    <h6><span>Zufälliger</span> Text</h6>
+    ​
+    <!-- Horizontale Linie -->
+    <hr />
+    ​
+    <!-- Skript zum Einbetten von JavaScript oder Verknüpfung einer JavaScript-Datei -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

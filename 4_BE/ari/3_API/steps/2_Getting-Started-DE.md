@@ -4,8 +4,8 @@ zuerst neue index.html und app.js erstellen dann init dann express installieren
 
 neue node app in app.js
 
-``js
-importiere express von "express";
+```js
+import express from "express";
 
 const app = express();
 
@@ -31,7 +31,7 @@ Bei den letzten vier handelt es sich um externe NPM-Pakete, aber ich möchte Ihn
 
 Wir werden also das native HTTPS-Node-Modul verwenden.
 
-Wenn wir also in unserer [Node-Dokumentation] (https://nodejs.org/api/http.html#httpgeturl-options-callback) danach suchen, können Sie das irgendwo dort sehen
+Wenn wir also in unserer [Node-Dokumentation](https://nodejs.org/api/http.html#httpgeturl-options-callback) danach suchen, können Sie das irgendwo dort sehen
 
 importieren:
 
@@ -53,7 +53,7 @@ innerhalb von app.get:
 ```js
 app.get("/", (req, res) => {
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=alsheim&appid=125e0bd3302b64278d69cc208ddcd956";
+    "https://api.openweathermap.org/data/2.5/weather?q=alsheim&appid=???????";
   https.get(url);
   res.send("Server steht und läuft");
 });
@@ -98,7 +98,7 @@ Schauen wir uns nun die Antwort in unserem Terminal an. Sie können sehen, dass 
 
 Sie scheinen völlig durcheinander zu sein, und wir können uns nicht wirklich einen Reim darauf machen. Was ist das also genau?
 Nun, das ist eigentlich ein Hexadezimalcode.
-Wenn wir ihn kopieren und in einen [Hexadezimalkonverter] (https://cryptii.com/pipes/hex-to-text) eingeben, können wir ihn in Text umwandeln, und Sie können sehen, dass der Text, den wir zurückbekommen, so ziemlich der Anfang des JSON ist, den wir von OpenWeatherMap zurückbekommen, das wir zuvor gesehen haben.
+Wenn wir ihn kopieren und in einen [Hexadezimalkonverter](https://cryptii.com/pipes/hex-to-text) eingeben, können wir ihn in Text umwandeln, und Sie können sehen, dass der Text, den wir zurückbekommen, so ziemlich der Anfang des JSON ist, den wir von OpenWeatherMap zurückbekommen, das wir zuvor gesehen haben.
 
 Was für uns jedoch viel nützlicher wäre, ist, ein Javascript-Objekt zu erhalten, und das können wir tun, indem wir die Daten in ein Javascript-Objekt konvertieren. Und um das zu tun, müssen wir JSON parse schreiben, und das wird ein JSON in eine Art String-Format umwandeln, sagen wir hexadezimal oder binär oder Text, und es dann in ein tatsächliches Javascript-Objekt umwandeln.
 

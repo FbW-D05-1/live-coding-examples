@@ -6,9 +6,9 @@ const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
 // Set up Cloudinary configuration
 cloudinary.config({
-  cloud_name: "",
-  api_key: "",
-  api_secret: "",
+  cloud_name: "dlkgqs21x",
+  api_key: "985179314343688",
+  api_secret: "q9qzWjoEcWN4xdaxJuiQCHiJQts",
 });
 
 // Set up Multer and Cloudinary storage engine
@@ -16,24 +16,7 @@ const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
     folder: "profile_pictures",
-    format: async (req, file) => {
-      let format;
-      switch (file.mimetype) {
-        case "image/jpeg":
-          format = "jpg";
-          break;
-        case "image/png":
-          format = "png";
-          break;
-        case "image/gif":
-          format = "gif";
-          break;
-        default:
-          format = "jpg";
-          break;
-      }
-      return format;
-    }, // Set desired file format here
+    public_id: (req, file) => `profile_picture_${new Date().toISOString()}`,
   },
 });
 
@@ -64,19 +47,10 @@ app.post("/users", upload.single("profilePicture"), async (req, res) => {
   try {
     const { name, email } = req.body;
 
-    // Create new User
-    const user = new User({ name, email });
+    // Create new User with profile picture URL
+    const user = new User({ name, email, profilePicture: req.file.path });
 
     // Save User to MongoDB
-    await user.save();
-
-    // Upload profile picture to Cloudinary with user ID as public ID
-    const result = await cloudinary.uploader.upload(req.file.path, {
-      public_id: `profile_picture_${user._id}`,
-    });
-
-    // Update User with profile picture URL
-    user.profilePicture = result.secure_url;
     await user.save();
 
     res.status(201).json(user);

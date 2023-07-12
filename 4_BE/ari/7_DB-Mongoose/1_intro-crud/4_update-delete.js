@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+
 main().catch((err) => console.log(err));
 
 async function main() {
@@ -45,9 +46,9 @@ const fruit = new Fruit({
 
 // delete
 
-// Fruit.deleteOne({ name: undefined })
-//   .then((result) => console.log(result))
-//   .catch((err) => console.log(err));
+Fruit.deleteOne({ name: undefined })
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err));
 
 // delete many
 
